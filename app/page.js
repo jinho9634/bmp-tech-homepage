@@ -37,10 +37,10 @@ export default function CompanyHomepage() {
           </div>
 
           <nav className="hidden md:flex gap-10 text-sm">
-            <a href="#about" className="hover:text-[#2563eb]">회사소개</a>
-            <a href="#services" className="hover:text-[#2563eb]">사업분야</a>
-            <a href="#strength" className="hover:text-[#2563eb]">핵심역량</a>
-            <a href="#contact" className="hover:text-[#2563eb]">문의하기</a>
+            <a href="#about" className="hover:text-[#0ea5a4]">회사소개</a>
+            <a href="#services" className="hover:text-[#0ea5a4]">사업분야</a>
+            <a href="#strength" className="hover:text-[#0ea5a4]">핵심역량</a>
+            <a href="#contact" className="hover:text-[#0ea5a4]">문의하기</a>
           </nav>
         </div>
       </header>
@@ -49,9 +49,9 @@ export default function CompanyHomepage() {
         <div className="mx-auto grid min-h-[900px] max-w-7xl gap-12 px-6 py-32 md:grid-cols-2 items-center">
           <div>
             <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-              High Frequency
+              Advanced RF
               <br />
-              RF Technology
+              Engineering
             </h1>
 
             <p className="mt-8 text-2xl font-semibold text-slate-700">
@@ -64,16 +64,16 @@ export default function CompanyHomepage() {
             </p>
 
             <div className="mt-10 flex gap-4">
-              <a className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-full">
+              <a className="bg-[#0ea5a4] hover:bg-[#0f766e] text-white px-6 py-3 rounded-full">
                 상담 문의
               </a>
-              <a className="border px-6 py-3 rounded-full">
+              <a className="border px-6 py-3 rounded-full hover:border-[#0ea5a4] hover:text-[#0ea5a4]">
                 사업분야
               </a>
             </div>
           </div>
 
-          <div className="bg-slate-100 rounded-3xl h-[400px] flex items-center justify-center text-slate-400">
+          <div className="bg-[#f0fdfa] rounded-3xl h-[400px] flex items-center justify-center text-slate-400">
             RF / PCB 이미지 영역
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function CompanyHomepage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((s) => (
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg">
+              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg border border-transparent hover:border-[#0ea5a4]/30">
                 <h3 className="text-2xl font-semibold">{s.title}</h3>
                 <p className="mt-4 text-slate-600">{s.description}</p>
               </div>
@@ -94,13 +94,13 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="strength" className="bg-slate-900 text-white py-32">
+      <section id="strength" className="bg-[#0f172a] text-white py-32">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-12">핵심역량</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {strengths.map((s) => (
-              <div className="bg-white/10 p-6 rounded-2xl">{s}</div>
+              <div className="bg-white/10 p-6 rounded-2xl border border-white/10">{s}</div>
             ))}
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function CompanyHomepage() {
             <input className="w-full mb-3 p-3 border rounded" placeholder="이름" />
             <input className="w-full mb-3 p-3 border rounded" placeholder="이메일" />
             <textarea className="w-full mb-3 p-3 border rounded" placeholder="문의" />
-            <button className="w-full bg-[#2563eb] text-white p-3 rounded">보내기</button>
+            <button className="w-full bg-[#0ea5a4] text-white p-3 rounded hover:bg-[#0f766e]">보내기</button>
           </div>
         </div>
       </section>
