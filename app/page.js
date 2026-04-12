@@ -24,7 +24,7 @@ export default function CompanyHomepage() {
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b">
         <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-6">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" className="h-40" />
+            <img src="/logo.png" alt="BMP TECH Logo" className="h-12 w-auto" />
             <span className="font-semibold">BMP TECH</span>
           </div>
           <nav className="hidden md:flex gap-8 text-sm">
@@ -112,6 +112,7 @@ export default function CompanyHomepage() {
           <div className="bg-white p-8 rounded-3xl border shadow">
             <input className="w-full mb-3 p-3 border rounded" placeholder="이름" />
             <input className="w-full mb-3 p-3 border rounded" placeholder="이메일" />
+	    <input className="w-full mb-3 p-3 border rounded" placeholder="연락처" />
             <textarea className="w-full mb-3 p-3 border rounded" placeholder="문의내용" />
 
             <button className="w-full py-3 bg-[#22b8cf] text-white rounded-full hover:bg-[#1699ae]">
