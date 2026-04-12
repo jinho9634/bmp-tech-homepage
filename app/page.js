@@ -127,7 +127,7 @@ export default function CompanyHomepage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 text-sm leading-7 md:grid-cols-2">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <img src="/logo.png" alt="BMP TECH Logo" className="h-8 w-auto" />
+              <img src="/logo.png" alt="BMP TECH Logo" className="h-12 w-auto" />
               <span className="text-lg font-semibold text-white">
                 비엠피테크 (BMP TECH)
               </span>
@@ -172,7 +172,7 @@ export default function CompanyHomepage() {
         </div>
 
         <div className="border-t border-white/10 py-6 text-center text-xs text-slate-500">
-          © 2026 BMP TECH. All rights reserved.
+          © 2025 BMP TECH. All rights reserved.
         </div>
       </footer>
 
