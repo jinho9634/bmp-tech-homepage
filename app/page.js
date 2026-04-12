@@ -24,7 +24,7 @@ export default function CompanyHomepage() {
       <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur border-b">
         <div className="max-w-7xl mx-auto flex justify-between items-center h-20 px-6">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" className="h-14" />
+            <img src="/logo.png" className="h-40" />
             <span className="font-semibold">BMP TECH</span>
           </div>
           <nav className="hidden md:flex gap-8 text-sm">
