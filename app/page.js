@@ -110,7 +110,7 @@ export default function CompanyHomepage() {
             <p className="mt-6 text-slate-600">프로젝트 문의 및 기술 상담 가능합니다.</p>
 
             <div className="mt-8 space-y-2">
-              <div>이메일: yjh@bmpretty.com</div>
+              <div>이메일: bmp@bmpretty.com</div>
               <div>전화: 02-XXXX-XXXX</div>
               <div>주소: 대전광역시 대덕구 신일동로17번길 5</div>
             </div>
