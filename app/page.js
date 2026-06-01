@@ -180,7 +180,7 @@ export default function CompanyHomepage() {
             <div className="text-white font-semibold mb-4">
               Customer Center
             </div>
-            전화 : 02-000-000
+            전화 : 070-4027-3667
             <br />
             평일 09:00 - 18:00
             <br />
