@@ -64,8 +64,8 @@ export default function CompanyHomepage() {
 
             <div className="mt-8 space-y-2 text-slate-700">
               <div>이메일: bmp@bmpretty.com</div>
-              <div>전화: 02-XXXX-XXXX</div>
-              <div>주소: 대전광역시 대덕구 신일동로17번길 5</div>
+              <div>전화: 070-4027-3667</div>
+              <div>주소: 대전광역시 대덕구 신일동로17번길 5 807호</div>
             </div>
           </div>
 
