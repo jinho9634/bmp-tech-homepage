@@ -168,7 +168,7 @@ export default function CompanyHomepage() {
             </div>
 
             <div>
-              대전광역시 대덕구 신일동로17번길 5 807호
+              (본사)대전광역시 대덕구 신일동로17번길 5 807호
               <br />
               사업자등록번호 : 242-81-03731
               <br />
