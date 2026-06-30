@@ -1,0 +1,8 @@
+C:\Users\RND_5\Desktop\yjh\work\homepage\bmp-tech-homepage> 들어가고
+
+git add .
+git commit -m "reorder homepage sections"
+git push
+순서대로 입력 후 
+
+조금있다가 https://www.bmpretty.com/ 에접속후 ctrl+shift+r로  페이지 새로고침하면 적용
