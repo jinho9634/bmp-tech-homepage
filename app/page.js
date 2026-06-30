@@ -199,20 +199,21 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#FFF0E4] py-28 text-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-          <div>
-            <h2 className="text-4xl font-bold md:text-5xl">
-              프로젝트 문의 및
-              <br />
-              기술 상담
-            </h2>
-            <div className="mt-8 space-y-3">
-              <div>이메일 : bmp@bmpretty.com</div>
-              <div>전화 : 070-4027-3667</div>
-              <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
-            </div>
-          </div>
+    <section id="contact" className="bg-[#FFF0E4] py-28">
+  <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+    <div>
+      <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
+        프로젝트 문의 및
+        <br />
+        기술 상담
+      </h2>
+
+      <div className="mt-8 space-y-3 text-[#d88986]">
+        <div>이메일 : bmp@bmpretty.com</div>
+        <div>전화 : 070-4027-3667</div>
+        <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
+      </div>
+    </div>
 
           <div className="bg-white p-8 text-slate-900 shadow-xl">
             <input className="mb-3 w-full border p-3" placeholder="이름" />
