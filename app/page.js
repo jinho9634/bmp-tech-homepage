@@ -154,15 +154,15 @@ export default function CompanyHomepage() {
         )}
       </header>
 
-      <section id="home" className="relative min-h-[85vh] overflow-hidden lg:min-h-screen">
-        <img
-          src="/beauty-hero.png"
-          alt="Beauty Tech Main Visual"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
+      <section id="home" className="relative overflow-hidden bg-[#fff0e9] pt-20 md:pt-24">
+  	<img
+   	 	src="/beauty-hero.png"
+    		alt="Beauty Tech Main Visual"
+    		className="absolute inset-0 h-full w-full object-contain object-top md:object-cover md:object-center"
+ 	 />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.78)_0%,rgba(255,232,227,0.50)_45%,rgba(255,255,255,0.04)_100%)]" />
 
-        <div className="relative mx-auto flex min-h-[85vh] max-w-[1500px] items-center px-5 sm:px-6 md:px-8 lg:min-h-screen lg:px-10 xl:px-12">
+        <div className="relative mx-auto flex min-h-[720px] max-w-[1500px] items-center px-5 sm:px-6 md:min-h-[760px] md:px-8 lg:min-h-[820px] lg:px-10 xl:px-12">
           <div className="max-w-3xl pt-24">
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#9b6a65] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               Make Beauty,
