@@ -202,7 +202,7 @@ export default function CompanyHomepage() {
       <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
           <div>
-            <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
+            <h2 className="text-4xl font-bold md:text-5xl">
               프로젝트 문의 및
               <br />
               기술 상담
