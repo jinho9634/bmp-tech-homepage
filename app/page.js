@@ -199,7 +199,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#FBEFEF] py-28 text-white">
+      <section id="contact" className="bg-[#AEE2FF] py-28 text-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
           <div>
             <h2 className="text-4xl font-bold md:text-5xl">
