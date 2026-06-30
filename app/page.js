@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 export default function CompanyHomepage() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const products = [
     {
       number: "PRODUCT 01",
@@ -49,68 +53,124 @@ export default function CompanyHomepage() {
   return (
     <div className="bg-[#fbf3ef] text-[#5b4a47]">
       <header className="fixed top-0 z-50 w-full bg-transparent">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:h-24 md:px-6">
+        <div className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 sm:px-6 md:h-24 md:px-8 lg:px-10 xl:px-12">
           <a href="#home" className="flex items-center gap-3">
-            <img src="/logo.png" alt="BMP TECH Logo" className="h-14 w-auto md:h-20" />
+            <img
+              src="/logo.png"
+              alt="BMP TECH Logo"
+              className="h-12 w-auto sm:h-14 md:h-16 lg:h-20 xl:h-24"
+            />
             <span className="text-sm font-bold text-[#5b4a47] md:text-base">
               BMP TECH
             </span>
           </a>
 
-          <nav className="hidden h-24 items-center gap-12 text-base font-bold text-[#5b4a47] md:flex">
+          <nav className="hidden h-24 items-center gap-10 text-base font-bold text-[#5b4a47] lg:flex">
             <div className="group flex h-24 items-center">
-              <a href="#about" className="hover:text-[#d88986]">회사소개</a>
+              <a href="#about" className="hover:text-[#d88986]">
+                회사소개
+              </a>
               <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
-                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
-                  <a href="#about" className="hover:text-[#d88986]">회사개요</a>
-                  <a href="#rnd" className="hover:text-[#d88986]">R&D 역량</a>
+                <div className="mx-auto flex max-w-[1500px] gap-16 px-12 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#about" className="hover:text-[#d88986]">
+                    회사개요
+                  </a>
+                  <a href="#rnd" className="hover:text-[#d88986]">
+                    R&D 역량
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="group flex h-24 items-center">
-              <a href="#products" className="hover:text-[#d88986]">제품소개</a>
+              <a href="#products" className="hover:text-[#d88986]">
+                제품소개
+              </a>
               <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
-                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
-                  <a href="#products" className="hover:text-[#d88986]">RF PCB Design</a>
-                  <a href="#products" className="hover:text-[#d88986]">RF Development</a>
-                  <a href="#products" className="hover:text-[#d88986]">RF System</a>
+                <div className="mx-auto flex max-w-[1500px] gap-16 px-12 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#products" className="hover:text-[#d88986]">
+                    RF PCB Design
+                  </a>
+                  <a href="#products" className="hover:text-[#d88986]">
+                    RF Development
+                  </a>
+                  <a href="#products" className="hover:text-[#d88986]">
+                    RF System
+                  </a>
                 </div>
               </div>
             </div>
 
-            <a href="#rnd" className="hover:text-[#d88986]">R&D</a>
+            <a href="#rnd" className="hover:text-[#d88986]">
+              R&D
+            </a>
 
             <div className="group flex h-24 items-center">
-              <a href="#contact" className="hover:text-[#d88986]">고객지원</a>
+              <a href="#contact" className="hover:text-[#d88986]">
+                고객지원
+              </a>
               <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
-                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
-                  <a href="#contact" className="hover:text-[#d88986]">문의하기</a>
-                  <a href="#footer" className="hover:text-[#d88986]">회사정보</a>
+                <div className="mx-auto flex max-w-[1500px] gap-16 px-12 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#contact" className="hover:text-[#d88986]">
+                    문의하기
+                  </a>
+                  <a href="#footer" className="hover:text-[#d88986]">
+                    회사정보
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
+
+          <button
+            type="button"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="rounded-md border border-[#d88986]/40 px-3 py-2 text-sm font-bold text-[#d88986] lg:hidden"
+          >
+            MENU
+          </button>
         </div>
+
+        {mobileOpen && (
+          <div className="bg-white/95 px-5 py-5 shadow-xl lg:hidden">
+            <div className="grid gap-4 text-sm font-bold text-[#5b4a47]">
+              <a href="#home" onClick={() => setMobileOpen(false)}>
+                HOME
+              </a>
+              <a href="#about" onClick={() => setMobileOpen(false)}>
+                회사소개
+              </a>
+              <a href="#products" onClick={() => setMobileOpen(false)}>
+                제품소개
+              </a>
+              <a href="#rnd" onClick={() => setMobileOpen(false)}>
+                R&D
+              </a>
+              <a href="#contact" onClick={() => setMobileOpen(false)}>
+                고객지원
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
-      <section id="home" className="relative min-h-screen overflow-hidden">
+      <section id="home" className="relative min-h-[85vh] overflow-hidden lg:min-h-screen">
         <img
           src="/beauty-hero.png"
           alt="Beauty Tech Main Visual"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.78)_0%,rgba(255,232,227,0.50)_45%,rgba(255,255,255,0.04)_100%)]" />
 
-        <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6">
+        <div className="relative mx-auto flex min-h-[85vh] max-w-[1500px] items-center px-5 sm:px-6 md:px-8 lg:min-h-screen lg:px-10 xl:px-12">
           <div className="max-w-3xl pt-24">
-            <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-[#9b6a65] sm:text-6xl md:text-8xl">
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#9b6a65] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               Make Beauty,
               <br />
               Make Pretty
             </h1>
 
-            <p className="mt-7 text-xl font-bold text-[#9b6a65] md:text-2xl">
+            <p className="mt-6 text-lg font-bold text-[#9b6a65] sm:text-xl md:text-2xl">
               고주파 RF PCB 제작 및 개발 전문 기업
             </p>
 
@@ -119,10 +179,16 @@ export default function CompanyHomepage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#about" className="border border-[#d88986] px-8 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white">
+              <a
+                href="#about"
+                className="border border-[#d88986] px-6 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white md:px-8"
+              >
                 ABOUT BMP TECH →
               </a>
-              <a href="#products" className="bg-[#d88986] px-8 py-3 text-sm font-bold text-white hover:bg-[#c87976]">
+              <a
+                href="#products"
+                className="bg-[#d88986] px-6 py-3 text-sm font-bold text-white hover:bg-[#c87976] md:px-8"
+              >
                 PRODUCT VIEW
               </a>
             </div>
@@ -130,10 +196,10 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="products" className="relative overflow-hidden bg-white py-24 md:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 md:grid-cols-[0.85fr_1.15fr]">
-            <div className="bg-[#d88986] p-10 text-white md:min-h-[520px]">
+      <section id="products" className="relative overflow-hidden bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="bg-[#d88986] p-8 text-white md:min-h-[520px] md:p-10">
               <p className="text-lg font-semibold">제품소개</p>
               <h2 className="mt-3 text-4xl font-bold">PRODUCT</h2>
               <div className="my-10 h-px w-14 bg-white/70" />
@@ -141,21 +207,37 @@ export default function CompanyHomepage() {
                 비엠피테크는 고주파 RF 기술을 기반으로 PCB 설계, 회로 개발,
                 시제품 및 제품화 지원을 수행합니다.
               </p>
-              <a href="#contact" className="mt-12 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]">
+              <a
+                href="#contact"
+                className="mt-12 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]"
+              >
                 CONTACT US →
               </a>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {products.map((item, index) => (
-                <div key={item.number} className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]">
-                  <div className="mb-8 flex h-36 items-center justify-center bg-[#fbf3ef] md:h-40">
-                    <div className="text-5xl font-bold text-[#d88986]/25">0{index + 1}</div>
+                <div
+                  key={item.number}
+                  className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]"
+                >
+                  <div className="mb-8 flex h-32 items-center justify-center bg-[#fbf3ef] md:h-40">
+                    <div className="text-5xl font-bold text-[#d88986]/25">
+                      0{index + 1}
+                    </div>
                   </div>
-                  <div className="text-xs font-bold text-[#caa6a3]">{item.number}</div>
-                  <h3 className="mt-3 text-2xl font-bold text-[#5b4a47]">{item.title}</h3>
-                  <p className="mt-2 font-semibold text-[#d88986]">{item.subtitle}</p>
-                  <p className="mt-4 text-sm leading-7 text-[#6d5b57]">{item.desc}</p>
+                  <div className="text-xs font-bold text-[#caa6a3]">
+                    {item.number}
+                  </div>
+                  <h3 className="mt-3 text-2xl font-bold text-[#5b4a47]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 font-semibold text-[#d88986]">
+                    {item.subtitle}
+                  </p>
+                  <p className="mt-4 text-sm leading-7 text-[#6d5b57]">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -163,8 +245,8 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="rnd" className="bg-[#fbf3ef] py-24 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+      <section id="rnd" className="bg-[#fbf3ef] py-20 md:py-28">
+        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 sm:px-6 md:grid-cols-2 md:px-8 lg:px-10 xl:px-12">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
               R&D Capability
@@ -179,16 +261,20 @@ export default function CompanyHomepage() {
           <div className="grid gap-5">
             {strengths.map((item, index) => (
               <div key={item} className="border-l-4 border-[#d88986] bg-white p-6">
-                <div className="text-sm font-bold text-[#d88986]">0{index + 1}</div>
-                <div className="mt-2 text-xl font-bold text-[#5b4a47]">{item}</div>
+                <div className="text-sm font-bold text-[#d88986]">
+                  0{index + 1}
+                </div>
+                <div className="mt-2 text-xl font-bold text-[#5b4a47]">
+                  {item}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="bg-white py-24 md:py-28">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="about" className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-10 xl:px-12">
           <h2 className="text-4xl font-bold text-[#5b4a47] md:text-5xl">
             About BMP TECH
           </h2>
@@ -199,8 +285,8 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#FFF0E4] py-24 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+      <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
+        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 sm:px-6 md:px-8 lg:grid-cols-2 lg:px-10 xl:px-12">
           <div>
             <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
               프로젝트 문의 및
@@ -215,12 +301,15 @@ export default function CompanyHomepage() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white p-8 text-slate-900 shadow-xl">
+          <form onSubmit={handleSubmit} className="bg-white p-6 text-slate-900 shadow-xl md:p-8">
             <input name="name" required className="mb-3 w-full border p-3" placeholder="이름" />
             <input name="email" required className="mb-3 w-full border p-3" placeholder="이메일" />
             <input name="phone" className="mb-3 w-full border p-3" placeholder="연락처" />
             <textarea name="message" required className="mb-3 min-h-[150px] w-full border p-3" placeholder="문의내용" />
-            <button type="submit" className="w-full bg-[#d88986] py-3 font-semibold text-white hover:bg-[#c87976]">
+            <button
+              type="submit"
+              className="w-full bg-[#d88986] py-3 font-semibold text-white hover:bg-[#c87976]"
+            >
               SEND MESSAGE
             </button>
           </form>
@@ -228,10 +317,10 @@ export default function CompanyHomepage() {
       </section>
 
       <footer id="footer" className="bg-[#5b4a47] text-slate-200">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 text-sm leading-7 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 text-sm leading-7 sm:px-6 md:grid-cols-3 md:px-8 lg:px-10 xl:px-12">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <img src="/logo.png" alt="BMP TECH Logo" className="h-14 w-auto" />
+              <img src="/logo.png" alt="BMP TECH Logo" className="h-12 w-auto md:h-14" />
               <span className="font-semibold text-white">BMP TECH</span>
             </div>
             <p className="text-slate-300">
