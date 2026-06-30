@@ -1,3 +1,5 @@
+"use client";
+
 export default function CompanyHomepage() {
   const products = [
     {
@@ -27,37 +29,67 @@ export default function CompanyHomepage() {
     "시제품부터 양산 검토까지 연계 지원",
   ];
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+
+    const subject = encodeURIComponent(`[BMP TECH 문의] ${name}`);
+    const body = encodeURIComponent(
+      `이름: ${name}\n이메일: ${email}\n연락처: ${phone}\n\n문의내용:\n${message}`
+    );
+
+    window.location.href = `mailto:bmp@bmpretty.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="bg-[#fbf3ef] text-[#5b4a47]">
       <header className="fixed top-0 z-50 w-full bg-transparent">
-        <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:h-24 md:px-6">
           <a href="#home" className="flex items-center gap-3">
-            <img src="/logo.png" alt="BMP TECH Logo" className="h-20 w-auto" />
-            <span className="text-base font-bold text-[#5b4a47]">
+            <img src="/logo.png" alt="BMP TECH Logo" className="h-14 w-auto md:h-20" />
+            <span className="text-sm font-bold text-[#5b4a47] md:text-base">
               BMP TECH
             </span>
           </a>
 
-          <nav className="hidden gap-12 text-base font-bold text-[#5b4a47] md:flex">
-            <div className="group relative">
+          <nav className="hidden h-24 items-center gap-12 text-base font-bold text-[#5b4a47] md:flex">
+            <div className="group flex h-24 items-center">
               <a href="#about" className="hover:text-[#d88986]">회사소개</a>
-              <div className="absolute left-1/2 top-8 hidden w-40 -translate-x-1/2 bg-white/95 p-4 text-sm font-medium text-[#5b4a47] shadow-xl group-hover:block">
-                <a href="#about" className="block py-2 hover:text-[#d88986]">회사개요</a>
-                <a href="#rnd" className="block py-2 hover:text-[#d88986]">R&D 역량</a>
+              <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
+                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#about" className="hover:text-[#d88986]">회사개요</a>
+                  <a href="#rnd" className="hover:text-[#d88986]">R&D 역량</a>
+                </div>
               </div>
             </div>
 
-            <div className="group relative">
+            <div className="group flex h-24 items-center">
               <a href="#products" className="hover:text-[#d88986]">제품소개</a>
-              <div className="absolute left-1/2 top-8 hidden w-48 -translate-x-1/2 bg-white/95 p-4 text-sm font-medium text-[#5b4a47] shadow-xl group-hover:block">
-                <a href="#products" className="block py-2 hover:text-[#d88986]">RF PCB Design</a>
-                <a href="#products" className="block py-2 hover:text-[#d88986]">RF Development</a>
-                <a href="#products" className="block py-2 hover:text-[#d88986]">RF System</a>
+              <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
+                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#products" className="hover:text-[#d88986]">RF PCB Design</a>
+                  <a href="#products" className="hover:text-[#d88986]">RF Development</a>
+                  <a href="#products" className="hover:text-[#d88986]">RF System</a>
+                </div>
               </div>
             </div>
 
             <a href="#rnd" className="hover:text-[#d88986]">R&D</a>
-            <a href="#contact" className="hover:text-[#d88986]">Contact</a>
+
+            <div className="group flex h-24 items-center">
+              <a href="#contact" className="hover:text-[#d88986]">고객지원</a>
+              <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
+                <div className="mx-auto flex max-w-7xl gap-16 px-6 py-7 text-sm font-medium text-[#5b4a47]">
+                  <a href="#contact" className="hover:text-[#d88986]">문의하기</a>
+                  <a href="#footer" className="hover:text-[#d88986]">회사정보</a>
+                </div>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
@@ -68,36 +100,29 @@ export default function CompanyHomepage() {
           alt="Beauty Tech Main Visual"
           className="absolute inset-0 h-full w-full object-cover"
         />
-
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.72)_0%,rgba(255,232,227,0.52)_46%,rgba(255,255,255,0.08)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.78)_0%,rgba(255,232,227,0.50)_45%,rgba(255,255,255,0.04)_100%)]" />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-6">
-          <div className="max-w-3xl pt-20">
-            <h1 className="text-6xl font-extrabold leading-tight tracking-tight text-[#9b6a65] md:text-8xl">
+          <div className="max-w-3xl pt-24">
+            <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-[#9b6a65] sm:text-6xl md:text-8xl">
               Make Beauty,
               <br />
               Make Pretty
             </h1>
 
-            <p className="mt-7 text-2xl font-bold text-[#9b6a65]">
+            <p className="mt-7 text-xl font-bold text-[#9b6a65] md:text-2xl">
               고주파 RF PCB 제작 및 개발 전문 기업
             </p>
 
-            <p className="mt-6 max-w-2xl text-lg leading-9 font-medium text-[#6d5b57]">
+            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-[#6d5b57] md:text-lg md:leading-9">
               RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
             </p>
 
-            <div className="mt-10 flex gap-4">
-              <a
-                href="#about"
-                className="border border-[#d88986] px-8 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white"
-              >
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#about" className="border border-[#d88986] px-8 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white">
                 ABOUT BMP TECH →
               </a>
-              <a
-                href="#products"
-                className="bg-[#d88986] px-8 py-3 text-sm font-bold text-white hover:bg-[#c87976]"
-              >
+              <a href="#products" className="bg-[#d88986] px-8 py-3 text-sm font-bold text-white hover:bg-[#c87976]">
                 PRODUCT VIEW
               </a>
             </div>
@@ -105,11 +130,9 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="products" className="relative overflow-hidden bg-[#fbf3ef] py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.9),transparent_25%),radial-gradient(circle_at_90%_80%,rgba(238,202,210,0.42),transparent_30%)]" />
-
-        <div className="relative mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-stretch">
+      <section id="products" className="relative overflow-hidden bg-white py-24 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-8 md:grid-cols-[0.85fr_1.15fr]">
             <div className="bg-[#d88986] p-10 text-white md:min-h-[520px]">
               <p className="text-lg font-semibold">제품소개</p>
               <h2 className="mt-3 text-4xl font-bold">PRODUCT</h2>
@@ -118,40 +141,21 @@ export default function CompanyHomepage() {
                 비엠피테크는 고주파 RF 기술을 기반으로 PCB 설계, 회로 개발,
                 시제품 및 제품화 지원을 수행합니다.
               </p>
-              <a
-                href="#contact"
-                className="mt-12 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]"
-              >
+              <a href="#contact" className="mt-12 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]">
                 CONTACT US →
               </a>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
               {products.map((item, index) => (
-                <div
-                  key={item.number}
-                  className={`bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)] ${
-                    index === 1 ? "md:-translate-y-8" : index === 2 ? "md:translate-y-8" : ""
-                  }`}
-                >
-                  <div className="mb-8 flex h-40 items-center justify-center bg-[#fbf3ef]">
-                    <div className="text-5xl font-bold text-[#d88986]/25">
-                      {index + 1 < 10 ? `0${index + 1}` : index + 1}
-                    </div>
+                <div key={item.number} className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]">
+                  <div className="mb-8 flex h-36 items-center justify-center bg-[#fbf3ef] md:h-40">
+                    <div className="text-5xl font-bold text-[#d88986]/25">0{index + 1}</div>
                   </div>
-
-                  <div className="text-xs font-bold text-[#caa6a3]">
-                    {item.number}
-                  </div>
-                  <h3 className="mt-3 text-2xl font-bold text-[#5b4a47]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 font-semibold text-[#d88986]">
-                    {item.subtitle}
-                  </p>
-                  <p className="mt-4 text-sm leading-7 text-[#6d5b57]">
-                    {item.desc}
-                  </p>
+                  <div className="text-xs font-bold text-[#caa6a3]">{item.number}</div>
+                  <h3 className="mt-3 text-2xl font-bold text-[#5b4a47]">{item.title}</h3>
+                  <p className="mt-2 font-semibold text-[#d88986]">{item.subtitle}</p>
+                  <p className="mt-4 text-sm leading-7 text-[#6d5b57]">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -159,7 +163,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      <section id="rnd" className="bg-white py-28">
+      <section id="rnd" className="bg-[#fbf3ef] py-24 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
@@ -174,20 +178,16 @@ export default function CompanyHomepage() {
 
           <div className="grid gap-5">
             {strengths.map((item, index) => (
-              <div key={item} className="border-l-4 border-[#d88986] bg-[#fbf3ef] p-6">
-                <div className="text-sm font-bold text-[#d88986]">
-                  0{index + 1}
-                </div>
-                <div className="mt-2 text-xl font-bold text-[#5b4a47]">
-                  {item}
-                </div>
+              <div key={item} className="border-l-4 border-[#d88986] bg-white p-6">
+                <div className="text-sm font-bold text-[#d88986]">0{index + 1}</div>
+                <div className="mt-2 text-xl font-bold text-[#5b4a47]">{item}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="bg-[#f4ebe8] py-28">
+      <section id="about" className="bg-white py-24 md:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-4xl font-bold text-[#5b4a47] md:text-5xl">
             About BMP TECH
@@ -199,35 +199,35 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-    <section id="contact" className="bg-[#FFF0E4] py-28">
-  <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-    <div>
-      <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
-        프로젝트 문의 및
-        <br />
-        기술 상담
-      </h2>
+      <section id="contact" className="bg-[#FFF0E4] py-24 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+          <div>
+            <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
+              프로젝트 문의 및
+              <br />
+              기술 상담
+            </h2>
 
-      <div className="mt-8 space-y-3 text-[#d88986]">
-        <div>이메일 : bmp@bmpretty.com</div>
-        <div>전화 : 070-4027-3667</div>
-        <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
-      </div>
-    </div>
+            <div className="mt-8 space-y-3 text-[#d88986]">
+              <div>이메일 : bmp@bmpretty.com</div>
+              <div>전화 : 070-4027-3667</div>
+              <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
+            </div>
+          </div>
 
-          <div className="bg-white p-8 text-slate-900 shadow-xl">
-            <input className="mb-3 w-full border p-3" placeholder="이름" />
-            <input className="mb-3 w-full border p-3" placeholder="이메일" />
-            <input className="mb-3 w-full border p-3" placeholder="연락처" />
-            <textarea className="mb-3 min-h-[150px] w-full border p-3" placeholder="문의내용" />
-            <button className="w-full bg-[#d88986] py-3 font-semibold text-white hover:bg-[#c87976]">
+          <form onSubmit={handleSubmit} className="bg-white p-8 text-slate-900 shadow-xl">
+            <input name="name" required className="mb-3 w-full border p-3" placeholder="이름" />
+            <input name="email" required className="mb-3 w-full border p-3" placeholder="이메일" />
+            <input name="phone" className="mb-3 w-full border p-3" placeholder="연락처" />
+            <textarea name="message" required className="mb-3 min-h-[150px] w-full border p-3" placeholder="문의내용" />
+            <button type="submit" className="w-full bg-[#d88986] py-3 font-semibold text-white hover:bg-[#c87976]">
               SEND MESSAGE
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
-      <footer className="bg-[#5b4a47] text-slate-200">
+      <footer id="footer" className="bg-[#5b4a47] text-slate-200">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 text-sm leading-7 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
