@@ -1,7 +1,7 @@
 export default function CompanyHomepage() {
   const services = [
     {
-      number: "01",
+      number: "02",
       title: "RF PCB 설계",
       desc: "고주파 특성을 고려한 정밀 PCB 설계",
     },
