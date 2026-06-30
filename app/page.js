@@ -82,31 +82,54 @@ export default function CompanyHomepage() {
         )}
       </header>
 
-      {/* HOME - MOBILE */}
-      <section id="home" className="bg-[#fff0e9] pt-20 lg:hidden">
-        <div className="h-[300px] bg-[url('/beauty-hero.png')] bg-cover bg-[70%_top]" />
-        <div className="px-6 pb-20 pt-10">
-          <h1 className="text-5xl font-extrabold leading-tight text-[#9b6a65]">
+      {/* HOME */}
+      <section id="home" className="relative bg-[#fff0e9] pt-20 lg:pt-0">
+  <div className="relative w-full overflow-hidden">
+    <img
+      src="/beauty-hero.png"
+      alt="Beauty Tech Main Visual"
+      className="block w-full h-auto"
+    />
+
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.55)_0%,rgba(255,232,227,0.35)_45%,rgba(255,255,255,0.05)_100%)]" />
+
+    <div className="absolute inset-0 flex items-center">
+      <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-3xl">
+          <h1 className="text-3xl font-extrabold leading-tight text-[#9b6a65] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             Make Beauty,
             <br />
             Make Pretty
           </h1>
-          <p className="mt-6 text-xl font-bold text-[#9b6a65]">
+
+          <p className="mt-4 text-base font-bold text-[#9b6a65] sm:text-xl md:text-2xl">
             고주파 RF PCB 제작 및 개발 전문 기업
           </p>
-          <p className="mt-6 text-base font-medium leading-8 text-[#6d5b57]">
+
+          <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-[#6d5b57] sm:text-base md:text-lg md:leading-9">
             RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
           </p>
-          <div className="mt-8 flex flex-col gap-3">
-            <a href="#about" className="border border-[#d88986] px-6 py-3 text-center text-sm font-bold text-[#d88986]">
+
+          <div className="mt-6 flex flex-wrap gap-3 md:mt-10 md:gap-4">
+            <a
+              href="#about"
+              className="border border-[#d88986] px-4 py-2 text-xs font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white sm:px-6 sm:py-3 sm:text-sm md:px-8"
+            >
               ABOUT BMP TECH →
             </a>
-            <a href="#products" className="bg-[#d88986] px-6 py-3 text-center text-sm font-bold text-white">
+
+            <a
+              href="#products"
+              className="bg-[#d88986] px-4 py-2 text-xs font-bold text-white hover:bg-[#c87976] sm:px-6 sm:py-3 sm:text-sm md:px-8"
+            >
               PRODUCT VIEW
             </a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* HOME - PC */}
       <section className="relative hidden min-h-screen overflow-hidden bg-[#fff0e9] lg:block">
