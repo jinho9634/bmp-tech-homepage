@@ -72,8 +72,7 @@ export default function CompanyHomepage() {
   };
 
   return (
-    <main className="bg-white text-[#5b4a47]">
-      {/* HEADER */}
+    <main className="scroll-smooth bg-white text-[#5b4a47]">
       <header className="fixed left-0 top-0 z-50 w-full bg-white/82 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 sm:px-6 md:h-24 md:px-8 lg:px-12">
           <a href="#home" className="flex items-center gap-3" onClick={closeMobile}>
@@ -162,8 +161,7 @@ export default function CompanyHomepage() {
         )}
       </header>
 
-      {/* HERO */}
-      <section id="home" className="bg-[#fff0e9] pt-20 md:pt-24">
+      <section id="home" className="scroll-mt-24 bg-[#fff0e9] pt-20 md:pt-24">
         <div className="mx-auto grid max-w-[1500px] items-center gap-8 px-5 py-10 sm:px-6 md:px-8 lg:min-h-[calc(100vh-96px)] lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 lg:px-12 lg:py-0">
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl font-extrabold leading-[1.08] tracking-tight text-[#9b6a65] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
@@ -206,8 +204,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      {/* PRODUCTS */}
-      <section id="products" className="bg-white py-20 md:py-28">
+      <section id="products" className="scroll-mt-24 bg-white py-20 md:py-28">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-12">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div className="bg-[#d88986] p-8 text-white md:p-10">
@@ -257,8 +254,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      {/* R&D */}
-      <section id="rnd" className="bg-[#fbf3ef] py-20 md:py-28">
+      <section id="rnd" className="scroll-mt-24 bg-[#fbf3ef] py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 sm:px-6 md:grid-cols-2 md:px-8 lg:px-12">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
@@ -295,8 +291,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="bg-white py-20 md:py-28">
+      <section id="about" className="scroll-mt-24 bg-white py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 sm:px-6 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-12">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
@@ -315,7 +310,6 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      {/* QUICK LINK */}
       <section className="bg-[#fbf3ef] py-20 md:py-24">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-12">
           <h2 className="mb-12 text-center text-4xl font-extrabold text-[#9b6a65] md:text-5xl">
@@ -329,15 +323,16 @@ export default function CompanyHomepage() {
                 className="group flex min-h-[150px] items-end bg-[#d88986] p-6 text-xl font-bold text-white transition hover:-translate-y-1 hover:bg-[#c87976]"
               >
                 {item.title}
-                <span className="ml-2 transition group-hover:translate-x-1">→</span>
+                <span className="ml-2 transition group-hover:translate-x-1">
+                  →
+                </span>
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
+      <section id="contact" className="scroll-mt-24 bg-[#FFF0E4] py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 sm:px-6 md:px-8 lg:grid-cols-2 lg:px-12">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
@@ -397,7 +392,6 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer id="footer" className="bg-[#5b4a47] text-slate-200">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 text-sm leading-7 sm:px-6 md:grid-cols-3 md:px-8 lg:px-12">
           <div>
@@ -421,7 +415,9 @@ export default function CompanyHomepage() {
           </div>
 
           <div>
-            <div className="mb-4 font-semibold text-white">CUSTOMER CENTER</div>
+            <div className="mb-4 font-semibold text-white">
+              CUSTOMER CENTER
+            </div>
             전화 : 070-4027-3667
             <br />
             평일 09:00 - 18:00
