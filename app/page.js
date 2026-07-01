@@ -125,49 +125,54 @@ export default function CompanyHomepage() {
         )}
       </header>
 
-      {/* HERO */}
-      <section id="home" className="bg-[#fff0e9] pt-20 lg:pt-0">
-  {/* MOBILE / TABLET */}
-  <div className="lg:hidden">
+     {/* HERO */}
+<section id="home" className="bg-[#fff0e9] pt-20 lg:pt-24">
+  <div className="relative w-full overflow-hidden">
     <img
       src="/beauty-hero.png"
       alt="Beauty Tech Main Visual"
-      className="w-full h-auto"
+      className="block w-full h-auto"
     />
 
-    <div className="px-6 py-12">
-      <h1 className="text-4xl font-extrabold leading-tight text-[#9b6a65] sm:text-5xl">
-        Make Beauty,
-        <br />
-        Make Pretty
-      </h1>
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.58)_0%,rgba(255,232,227,0.36)_45%,rgba(255,255,255,0.05)_100%)]" />
 
-      <p className="mt-5 text-lg font-bold text-[#9b6a65]">
-        고주파 RF PCB 제작 및 개발 전문 기업
-      </p>
+    <div className="absolute inset-0 flex items-center">
+      <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-12">
+        <div className="max-w-[46%] sm:max-w-[50%] md:max-w-[52%]">
+          <h1 className="text-[7vw] font-extrabold leading-tight text-[#9b6a65] md:text-[6vw] lg:text-[5.4vw] xl:text-8xl">
+            Make Beauty,
+            <br />
+            Make Pretty
+          </h1>
 
-      <p className="mt-5 text-base leading-8 text-[#6d5b57]">
-        RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를
-        높이는 엔지니어링 서비스를 제공합니다.
-      </p>
+          <p className="mt-3 text-[2.4vw] font-bold text-[#9b6a65] md:mt-5 md:text-xl lg:text-2xl">
+            고주파 RF PCB 제작 및 개발 전문 기업
+          </p>
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a
-          href="#about"
-          className="border border-[#d88986] px-6 py-3 text-center text-sm font-bold text-[#d88986]"
-        >
-          ABOUT BMP TECH →
-        </a>
+          <p className="mt-3 max-w-2xl text-[1.7vw] font-medium leading-relaxed text-[#6d5b57] md:mt-5 md:text-base lg:text-lg">
+            RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
+          </p>
 
-        <a
-          href="#products"
-          className="bg-[#d88986] px-6 py-3 text-center text-sm font-bold text-white"
-        >
-          PRODUCT VIEW
-        </a>
+          <div className="mt-4 flex flex-wrap gap-2 md:mt-8 md:gap-4">
+            <a
+              href="#about"
+              className="border border-[#d88986] px-3 py-2 text-[1.5vw] font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white md:px-6 md:py-3 md:text-sm"
+            >
+              ABOUT BMP TECH →
+            </a>
+
+            <a
+              href="#products"
+              className="bg-[#d88986] px-3 py-2 text-[1.5vw] font-bold text-white hover:bg-[#c87976] md:px-6 md:py-3 md:text-sm"
+            >
+              PRODUCT VIEW
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
   {/* PC */}
   <div className="relative hidden min-h-screen overflow-hidden lg:block">
