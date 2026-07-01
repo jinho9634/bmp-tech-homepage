@@ -126,51 +126,95 @@ export default function CompanyHomepage() {
       </header>
 
       {/* HERO */}
-      <section
-        id="home"
-        className="bg-[#fff0e9] pt-24 md:pt-28"
-      >
-        <div className="mx-auto grid max-w-[1500px] items-center gap-8 px-5 pb-16 md:px-8 lg:min-h-screen lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:pb-0">
-          <div className="order-2 lg:order-1">
-            <h1 className="text-5xl font-extrabold leading-tight text-[#9b6a65] sm:text-6xl md:text-7xl lg:text-8xl">
-              Make Beauty,
-              <br />
-              Make Pretty
-            </h1>
+      <section id="home" className="bg-[#fff0e9] pt-20 lg:pt-0">
+  {/* MOBILE / TABLET */}
+  <div className="lg:hidden">
+    <img
+      src="/beauty-hero.png"
+      alt="Beauty Tech Main Visual"
+      className="w-full h-auto"
+    />
 
-            <p className="mt-6 text-xl font-bold text-[#9b6a65] md:text-2xl">
-              고주파 RF PCB 제작 및 개발 전문 기업
-            </p>
+    <div className="px-6 py-12">
+      <h1 className="text-4xl font-extrabold leading-tight text-[#9b6a65] sm:text-5xl">
+        Make Beauty,
+        <br />
+        Make Pretty
+      </h1>
 
-            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-[#6d5b57] md:text-lg md:leading-9">
-              RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
-            </p>
+      <p className="mt-5 text-lg font-bold text-[#9b6a65]">
+        고주파 RF PCB 제작 및 개발 전문 기업
+      </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#about"
-                className="border border-[#d88986] px-6 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white md:px-8"
-              >
-                ABOUT BMP TECH →
-              </a>
-              <a
-                href="#products"
-                className="bg-[#d88986] px-6 py-3 text-sm font-bold text-white hover:bg-[#c87976] md:px-8"
-              >
-                PRODUCT VIEW
-              </a>
-            </div>
-          </div>
+      <p className="mt-5 text-base leading-8 text-[#6d5b57]">
+        RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를
+        높이는 엔지니어링 서비스를 제공합니다.
+      </p>
 
-          <div className="order-1 lg:order-2">
-            <img
-              src="/beauty-hero.png"
-              alt="Beauty Tech Main Visual"
-              className="w-full h-auto object-contain"
-            />
-          </div>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href="#about"
+          className="border border-[#d88986] px-6 py-3 text-center text-sm font-bold text-[#d88986]"
+        >
+          ABOUT BMP TECH →
+        </a>
+
+        <a
+          href="#products"
+          className="bg-[#d88986] px-6 py-3 text-center text-sm font-bold text-white"
+        >
+          PRODUCT VIEW
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {/* PC */}
+  <div className="relative hidden min-h-screen overflow-hidden lg:block">
+    <img
+      src="/beauty-hero.png"
+      alt="Beauty Tech Main Visual"
+      className="absolute inset-0 h-full w-full object-cover object-center"
+    />
+
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.75)_0%,rgba(255,232,227,0.48)_45%,rgba(255,255,255,0.05)_100%)]" />
+
+    <div className="relative mx-auto flex min-h-screen max-w-[1500px] items-center px-12">
+      <div className="max-w-3xl pt-24">
+        <h1 className="text-8xl font-extrabold leading-tight text-[#9b6a65]">
+          Make Beauty,
+          <br />
+          Make Pretty
+        </h1>
+
+        <p className="mt-7 text-2xl font-bold text-[#9b6a65]">
+          고주파 RF PCB 제작 및 개발 전문 기업
+        </p>
+
+        <p className="mt-6 max-w-2xl text-lg font-medium leading-9 text-[#6d5b57]">
+          RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를
+          높이는 엔지니어링 서비스를 제공합니다.
+        </p>
+
+        <div className="mt-10 flex gap-4">
+          <a
+            href="#about"
+            className="border border-[#d88986] px-8 py-3 text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white"
+          >
+            ABOUT BMP TECH →
+          </a>
+
+          <a
+            href="#products"
+            className="bg-[#d88986] px-8 py-3 text-sm font-bold text-white hover:bg-[#c87976]"
+          >
+            PRODUCT VIEW
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* PRODUCTS */}
       <section id="products" className="bg-white py-20 md:py-28">
