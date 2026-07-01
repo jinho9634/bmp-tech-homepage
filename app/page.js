@@ -317,15 +317,15 @@ export default function CompanyHomepage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
-        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
+      <section id="rnd" className="bg-[#fbf3ef] py-20 md:py-28">
+        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:grid-cols-2 md:px-8 lg:px-12">
           <div>
-            <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
+            <h2 className="mt-5 text-4xl font-bold leading-tight md:text-5xl">
               프로젝트 문의 및
               <br />
               기술 상담
             </h2>
-            <div className="mt-8 space-y-3 text-[#d88986]">
+            <div className="mt-8 max-w-4xl text-lg leading-9 text-[#6d5b57]">
               <div>이메일 : bmp@bmpretty.com</div>
               <div>전화 : 070-4027-3667</div>
               <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
