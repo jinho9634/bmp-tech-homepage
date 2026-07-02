@@ -6,10 +6,13 @@ export default function CompanyHomepage() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const products = [
-    ["PRODUCT 01", "RF PCB Design", "고주파 RF PCB 설계·제작"],
-    ["PRODUCT 02", "RF Development", "RF 회로 및 제어 개발"],
-    ["PRODUCT 03", "RF System", "시제품·제품화 지원"],
-  ];
+  ["PRODUCT 01", "RF PCB Design", "고주파 RF PCB 설계·제작"],
+  ["PRODUCT 02", "RF Development", "RF 회로 및 제어 개발"],
+  ["PRODUCT 03", "RF System", "시제품·제품화 지원"],
+  ["PRODUCT 04", "Control Board", "제어 보드 설계·개발"],
+  ["PRODUCT 05", "Firmware", "임베디드 펌웨어 개발"],
+  ["PRODUCT 06", "Prototype Support", "시제품 검증·양산 지원"],
+];
 
   const strengths = [
     "고주파 RF PCB 설계 및 제작 대응",
@@ -155,31 +158,38 @@ export default function CompanyHomepage() {
       </section>
 
       {/* PRODUCTS */}
-      <section id="products" className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-[1500px] px-5 md:px-8 lg:px-12">
-            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {products.map(([num, title, sub], i) => (
-                <div
-                  key={num}
-                  className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]"
-                >
-                  <div className="mb-8 flex h-32 items-center justify-center bg-[#fbf3ef] md:h-40">
-                    <div className="text-5xl font-bold text-[#d88986]/25">
-                      0{i + 1}
-                    </div>
-                  </div>
-                  <div className="text-xs font-bold text-[#caa6a3]">{num}</div>
-                  <h3 className="mt-3 text-2xl font-bold">{title}</h3>
-                  <p className="mt-2 font-semibold text-[#d88986]">{sub}</p>
-                  <p className="mt-4 text-sm leading-7 text-[#6d5b57]">
-                    고주파 특성을 고려한 설계, 개발, 검증 및 제품화 대응을 수행합니다.
-                  </p>
-                </div>
-              ))}
+<section id="products" className="bg-white py-20 md:py-28">
+  <div className="mx-auto max-w-[1500px] px-5 md:px-8 lg:px-12">
+    <div className="mb-12 text-center">
+      <p className="text-lg font-bold text-[#d88986]">제품소개</p>
+      <h2 className="mt-3 text-4xl font-extrabold text-[#5b4a47] md:text-5xl">
+        PRODUCT
+      </h2>
+    </div>
+
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {products.map(([num, title, sub], i) => (
+        <div
+          key={num}
+          className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]"
+        >
+          <div className="mb-8 flex h-32 items-center justify-center bg-[#fbf3ef] md:h-40">
+            <div className="text-5xl font-bold text-[#d88986]/25">
+              {String(i + 1).padStart(2, "0")}
             </div>
           </div>
+
+          <div className="text-xs font-bold text-[#caa6a3]">{num}</div>
+          <h3 className="mt-3 text-2xl font-bold text-[#333333]">{title}</h3>
+          <p className="mt-2 font-semibold text-[#d88986]">{sub}</p>
+          <p className="mt-4 text-sm leading-7 text-[#6d5b57]">
+            고주파 특성을 고려한 설계, 개발, 검증 및 제품화 대응을 수행합니다.
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* R&D */}
       <section id="rnd" className="bg-[#fbf3ef] py-20 md:py-28">
