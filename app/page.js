@@ -109,7 +109,7 @@ export default function CompanyHomepage() {
       </section>
 
      {/* HOME */}
-<section id="home" className="relative bg-[#fff0e9] pt-20 lg:pt-0">
+<section className="relative hidden bg-[#fff0e9] pt-20 lg:block lg:pt-0">
   <div className="relative w-full overflow-hidden">
     <img
       src="/beauty-hero.png"
