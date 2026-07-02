@@ -1,10 +1,10 @@
 export default function ProductPage2() {
   return (
     <main className="bg-white text-[#5b4a47]">
-      <section className="bg-[#fff0e9] px-6 pt-16 pb-2 md:pt-20 md:pb-2">
+      <section className="bg-[#fff0e9] px-6 pt-3 pb-2 md:pt-5 md:pb-2">
         <div className="mx-auto max-w-[1200px]">
           <a href="/#products" className="text-sm font-bold text-[#d88986]">← PRODUCT LIST</a>
-          <p className="mt-10 text-sm font-bold tracking-[0.25em] text-[#d88986]">PRODUCT 02</p>
+          <p className="mt-6 text-sm font-bold tracking-[0.25em] text-[#d88986]">PRODUCT 02</p>
           <h1 className="mt-4 text-5xl font-extrabold md:text-6xl">RF Development</h1>
           <p className="mt-5 text-2xl font-bold text-[#9b6a65]">RF 회로 및 제어 개발</p>
         </div>
