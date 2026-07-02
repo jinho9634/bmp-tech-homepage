@@ -261,7 +261,9 @@ export default function CompanyHomepage() {
         <div className="mx-auto max-w-[1500px] px-5 md:px-8 lg:px-12">
           <h2 className="text-4xl font-bold md:text-5xl">About BMP TECH</h2>
           <p className="mt-8 max-w-4xl text-lg leading-9 text-[#6d5b57]">
-            비엠피테크는 고주파 RF PCB 제작 및 개발을 중심으로 의료·뷰티 디바이스와 전자 제품 개발을 지원하는 기술 기업입니다.
+            비엠피테크는 고주파 RF PCB 제작 및 개발을 중심으로 의료·뷰티 디바이스와 
+	    <br />
+	    전자 제품 개발을 지원하는 기술 기업입니다.
           </p>
         </div>
       </section>
