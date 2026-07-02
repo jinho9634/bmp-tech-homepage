@@ -44,12 +44,14 @@ export default function CompanyHomepage() {
               ["제품소개", "products", ["RF PCB Design", "RF Development", "RF System"]],
               ["고객지원", "contact", ["문의하기", "회사정보"]],
             ].map(([title, id, items]) => (
-              <div key={title} className="group flex h-24 items-center">
+              <div key={title} className="group relative flex h-24 items-center">
                 <a href={`#${id}`} className="hover:text-[#d88986]">{title}</a>
-                <div className="fixed left-0 top-24 hidden w-full bg-white/95 shadow-xl group-hover:block">
-                  <div className="mx-auto flex max-w-[1500px] gap-16 px-12 py-7 text-sm font-medium">
+                <div className="absolute top-full left-0 hidden min-w-[180px] rounded-md bg-white shadow-xl group-hover:block">
+                  <div className="flex flex-col py-2 text-sm font-medium">
                     {items.map((item) => (
-                      <a key={item} href={`#${id}`} className="hover:text-[#d88986]">{item}</a>
+                      <a key={item} href={`#${id}`} className="whitespace-nowrap px-5 py-3 hover:bg-[#fbf3ef] hover:text-[#d88986]">
+  			 {item}
+		      </a>
                     ))}
                   </div>
                 </div>
