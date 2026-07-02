@@ -279,7 +279,7 @@ export default function CompanyHomepage() {
     </div>
     {/* 회사 정보 */}
     <div>
-      <div className="mb-5 text-base font-bold text-[#d88986]">
+      <div className="mb-5 text-base font-bold text-[#5B4A47]">
         COMPANY
       </div>
       <div>
@@ -294,7 +294,7 @@ export default function CompanyHomepage() {
     </div>
     {/* 고객센터 */}
     <div>
-      <div className="mb-5 text-base font-bold text-[#d88986]">
+      <div className="mb-5 text-base font-bold text-[#5B4A47]">
         CUSTOMER CENTER
       </div>
       <div>전화 : 070-4027-3667</div>
