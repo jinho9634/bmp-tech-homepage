@@ -1,7 +1,7 @@
 export default function ProductPage3() {
   return (
     <main className="bg-white text-[#5b4a47]">
-      <section className="bg-[#fff0e9] px-6 pb-20 pt-32 md:pt-40">
+      <section className="bg-[#fff0e9] px-6 pt-24 pb-12 md:pt-28 md:pb-14">
         <div className="mx-auto max-w-[1200px]">
           <a href="/#products" className="text-sm font-bold text-[#d88986]">← PRODUCT LIST</a>
           <p className="mt-10 text-sm font-bold tracking-[0.25em] text-[#d88986]">PRODUCT 03</p>
