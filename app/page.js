@@ -18,6 +18,8 @@ export default function CompanyHomepage() {
     "시제품부터 양산 검토까지 연계 지원",
   ];
 
+  const closeMobile = () => setMobileOpen(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const f = e.currentTarget;
@@ -31,10 +33,14 @@ export default function CompanyHomepage() {
   return (
     <div className="bg-white text-[#5b4a47]">
       {/* HEADER */}
-      <header className="fixed top-0 z-50 w-full bg-white/45 backdrop-blur-md lg:bg-transparent">
+      <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 md:px-8 lg:h-24 lg:px-12">
-          <a href="#home" className="flex items-center gap-3">
-            <img src="/logo.png" alt="BMP TECH Logo" className="h-12 w-auto md:h-16 lg:h-20" />
+          <a href="#home" onClick={closeMobile} className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="BMP TECH Logo"
+              className="h-12 w-auto md:h-16 lg:h-20"
+            />
             <span className="text-sm font-bold md:text-base">BMP TECH</span>
           </a>
 
@@ -45,19 +51,29 @@ export default function CompanyHomepage() {
               ["고객지원", "contact", ["문의하기", "회사정보"]],
             ].map(([title, id, items]) => (
               <div key={title} className="group relative flex h-24 items-center">
-                <a href={`#${id}`} className="hover:text-[#d88986]">{title}</a>
-                <div className="absolute top-full left-0 hidden min-w-[180px] rounded-md bg-white shadow-xl group-hover:block">
+                <a href={`#${id}`} className="hover:text-[#d88986]">
+                  {title}
+                </a>
+
+                <div className="absolute left-0 top-full hidden min-w-[180px] rounded-md bg-white shadow-xl group-hover:block">
                   <div className="flex flex-col py-2 text-sm font-medium">
                     {items.map((item) => (
-                      <a key={item} href={`#${id}`} className="whitespace-nowrap px-5 py-3 hover:bg-[#fbf3ef] hover:text-[#d88986]">
-  			 {item}
-		      </a>
+                      <a
+                        key={item}
+                        href={`#${id}`}
+                        className="whitespace-nowrap px-5 py-3 hover:bg-[#fbf3ef] hover:text-[#d88986]"
+                      >
+                        {item}
+                      </a>
                     ))}
                   </div>
                 </div>
               </div>
             ))}
-            <a href="#rnd" className="hover:text-[#d88986]">R&D</a>
+
+            <a href="#rnd" className="hover:text-[#d88986]">
+              R&D
+            </a>
           </nav>
 
           <button
@@ -70,94 +86,73 @@ export default function CompanyHomepage() {
 
         {mobileOpen && (
           <div className="bg-white px-5 py-5 shadow-xl lg:hidden">
-            {["HOME", "회사소개", "제품소개", "R&D", "고객지원"].map((m, i) => (
+            {[
+              ["HOME", "#home"],
+              ["회사소개", "#about"],
+              ["제품소개", "#products"],
+              ["R&D", "#rnd"],
+              ["고객지원", "#contact"],
+            ].map(([name, link]) => (
               <a
-                key={m}
-                href={["#home", "#about", "#products", "#rnd", "#contact"][i]}
-                onClick={() => setMobileOpen(false)}
+                key={name}
+                href={link}
+                onClick={closeMobile}
                 className="block py-3 text-sm font-bold"
               >
-                {m}
+                {name}
               </a>
             ))}
           </div>
         )}
       </header>
 
-      {/* HOME - MOBILE */}
-      <section id="home" className="bg-[#fff0e9] pt-20 lg:hidden">
-        <div className="h-[300px] bg-[url('/beauty-hero.png')] bg-cover bg-[70%_top]" />
-        <div className="px-6 pb-20 pt-10">
-          <h1 className="text-5xl font-extrabold leading-tight text-[#9b6a65]">
-            Make Beauty,
-            <br />
-            Make Pretty
-          </h1>
-          <p className="mt-6 text-xl font-bold text-[#9b6a65]">
-            고주파 RF PCB 제작 및 개발 전문 기업
-          </p>
-          <p className="mt-6 text-base font-medium leading-8 text-[#6d5b57]">
-            RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
-          </p>
-          <div className="mt-8 flex flex-col gap-3">
-            <a href="#about" className="border border-[#d88986] px-6 py-3 text-center text-sm font-bold text-[#d88986]">
-              ABOUT BMP TECH →
-            </a>
-            <a href="#products" className="bg-[#d88986] px-6 py-3 text-center text-sm font-bold text-white">
-              PRODUCT VIEW
-            </a>
+      {/* HOME - ONE RESPONSIVE HERO */}
+      <section
+        id="home"
+        className="relative min-h-screen overflow-hidden bg-[#fff0e9] pt-20 lg:pt-24"
+      >
+        <img
+          src="/beauty-hero.png"
+          alt="Beauty Tech Main Visual"
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] md:object-center"
+        />
+
+        <div className="absolute inset-0 bg-[#fff0e9]/70 md:bg-[linear-gradient(90deg,rgba(255,242,238,0.75)_0%,rgba(255,232,227,0.45)_45%,rgba(255,255,255,0.05)_100%)]" />
+
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-[1500px] items-center px-6 py-12 md:px-8 lg:min-h-[calc(100vh-96px)] lg:px-12">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl font-extrabold leading-tight text-[#9b6a65] md:text-6xl lg:text-7xl xl:text-8xl">
+              Make Beauty,
+              <br />
+              Make Pretty
+            </h1>
+
+            <p className="mt-6 text-xl font-bold text-[#9b6a65] md:text-2xl">
+              고주파 RF PCB 제작 및 개발 전문 기업
+            </p>
+
+            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-[#6d5b57] md:text-lg md:leading-9">
+              RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#about"
+                className="border border-[#d88986] px-6 py-3 text-center text-sm font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white"
+              >
+                ABOUT BMP TECH →
+              </a>
+
+              <a
+                href="#products"
+                className="bg-[#d88986] px-6 py-3 text-center text-sm font-bold text-white hover:bg-[#c87976]"
+              >
+                PRODUCT VIEW
+              </a>
+            </div>
           </div>
         </div>
       </section>
-
-     {/* HOME */}
-<section className="relative hidden bg-[#fff0e9] pt-20 lg:block lg:pt-0">
-  <div className="relative w-full overflow-hidden">
-    <img
-      src="/beauty-hero.png"
-      alt="Beauty Tech Main Visual"
-      className="block w-full h-auto"
-    />
-
-    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,242,238,0.55)_0%,rgba(255,232,227,0.35)_45%,rgba(255,255,255,0.05)_100%)]" />
-
-    <div className="absolute inset-0 flex items-center">
-      <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl font-extrabold leading-tight text-[#9b6a65] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
-            Make Beauty,
-            <br />
-            Make Pretty
-          </h1>
-
-          <p className="mt-4 text-base font-bold text-[#9b6a65] sm:text-xl md:text-2xl">
-            고주파 RF PCB 제작 및 개발 전문 기업
-          </p>
-
-          <p className="mt-4 max-w-2xl text-sm font-medium leading-7 text-[#6d5b57] sm:text-base md:text-lg md:leading-9">
-            RF PCB 설계, RF 회로 개발, 제품화 지원까지 제품의 성능과 완성도를 높이는 엔지니어링 서비스를 제공합니다.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3 md:mt-10 md:gap-4">
-            <a
-              href="#about"
-              className="border border-[#d88986] px-4 py-2 text-xs font-bold text-[#d88986] hover:bg-[#d88986] hover:text-white sm:px-6 sm:py-3 sm:text-sm md:px-8"
-            >
-              ABOUT BMP TECH →
-            </a>
-
-            <a
-              href="#products"
-              className="bg-[#d88986] px-4 py-2 text-xs font-bold text-white hover:bg-[#c87976] sm:px-6 sm:py-3 sm:text-sm md:px-8"
-            >
-              PRODUCT VIEW
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
       {/* PRODUCTS */}
       <section id="products" className="bg-white py-20 md:py-28">
@@ -170,16 +165,24 @@ export default function CompanyHomepage() {
               <p className="leading-8">
                 비엠피테크는 고주파 RF 기술을 기반으로 PCB 설계, 회로 개발, 시제품 및 제품화 지원을 수행합니다.
               </p>
-              <a href="#contact" className="mt-10 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]">
+              <a
+                href="#contact"
+                className="mt-10 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]"
+              >
                 CONTACT US →
               </a>
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {products.map(([num, title, sub], i) => (
-                <div key={num} className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]">
+                <div
+                  key={num}
+                  className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]"
+                >
                   <div className="mb-8 flex h-32 items-center justify-center bg-[#fbf3ef] md:h-40">
-                    <div className="text-5xl font-bold text-[#d88986]/25">0{i + 1}</div>
+                    <div className="text-5xl font-bold text-[#d88986]/25">
+                      0{i + 1}
+                    </div>
                   </div>
                   <div className="text-xs font-bold text-[#caa6a3]">{num}</div>
                   <h3 className="mt-3 text-2xl font-bold">{title}</h3>
@@ -198,17 +201,22 @@ export default function CompanyHomepage() {
       <section id="rnd" className="bg-[#fbf3ef] py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:grid-cols-2 md:px-8 lg:px-12">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">R&D Capability</p>
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">
+              R&D Capability
+            </p>
             <h2 className="mt-5 text-4xl font-bold leading-tight md:text-5xl">
               RF 회로와 PCB 구조를
               <br />
               함께 고려하는 개발
             </h2>
           </div>
+
           <div className="grid gap-5">
             {strengths.map((s, i) => (
               <div key={s} className="border-l-4 border-[#d88986] bg-white p-6">
-                <div className="text-sm font-bold text-[#d88986]">0{i + 1}</div>
+                <div className="text-sm font-bold text-[#d88986]">
+                  0{i + 1}
+                </div>
                 <div className="mt-2 text-xl font-bold">{s}</div>
               </div>
             ))}
@@ -254,6 +262,7 @@ export default function CompanyHomepage() {
         </div>
       </section>
 
+      {/* FOOTER */}
       <footer id="footer" className="bg-[#5b4a47] text-slate-200">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 text-sm leading-7 md:grid-cols-3 md:px-8 lg:px-12">
           <div>
@@ -262,6 +271,7 @@ export default function CompanyHomepage() {
             <br />
             High Frequency RF Engineering
           </div>
+
           <div>
             <div className="mb-4 font-semibold text-white">COMPANY</div>
             (본사) 대전광역시 대덕구 신일동로17번길 5 807호
@@ -270,6 +280,7 @@ export default function CompanyHomepage() {
             <br />
             대표자 : 김영식
           </div>
+
           <div>
             <div className="mb-4 font-semibold text-white">CUSTOMER CENTER</div>
             전화 : 070-4027-3667
