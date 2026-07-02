@@ -4,14 +4,51 @@ import { useState } from "react";
 
 export default function CompanyHomepage() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = [
-  ["PRODUCT 01", "RF PCB Design", "고주파 RF PCB 설계·제작"],
-  ["PRODUCT 02", "RF Development", "RF 회로 및 제어 개발"],
-  ["PRODUCT 03", "RF System", "시제품·제품화 지원"],
-  ["PRODUCT 04", "Control Board", "제어 보드 설계·개발"],
-  ["PRODUCT 05", "Firmware", "임베디드 펌웨어 개발"],
-  ["PRODUCT 06", "Prototype Support", "시제품 검증·양산 지원"],
+  {
+    num: "PRODUCT 01",
+    title: "RF PCB Design",
+    sub: "고주파 RF PCB 설계·제작",
+    image: "/product01.png",
+    detail: "고주파 RF 특성을 고려한 PCB 패턴, 임피던스, GND 구조, 부품 배치 및 제작 대응을 수행합니다.",
+  },
+  {
+    num: "PRODUCT 02",
+    title: "RF Development",
+    sub: "RF 회로 및 제어 개발",
+    image: "/product02.png",
+    detail: "RF 회로 구성, 출력 제어, 신호 검증, 시스템 연동 개발을 지원합니다.",
+  },
+  {
+    num: "PRODUCT 03",
+    title: "RF System",
+    sub: "시제품·제품화 지원",
+    image: "/product03.png",
+    detail: "시제품 제작, 동작 검증, 설계 보완, 제품화 검토까지 연계 지원합니다.",
+  },
+  {
+    num: "PRODUCT 04",
+    title: "Control Board",
+    sub: "제어 보드 설계·개발",
+    image: "/product04.png",
+    detail: "MCU 기반 제어보드, 인터페이스 회로, 센서 및 액추에이터 연동 회로를 개발합니다.",
+  },
+  {
+    num: "PRODUCT 05",
+    title: "Firmware",
+    sub: "임베디드 펌웨어 개발",
+    image: "/product05.png",
+    detail: "STM32, C2000 등 임베디드 시스템 기반 펌웨어와 통신 제어 로직을 개발합니다.",
+  },
+  {
+    num: "PRODUCT 06",
+    title: "Prototype Support",
+    sub: "시제품 검증·양산 지원",
+    image: "/product06.png",
+    detail: "시제품 검증, 문제 분석, 양산 전 설계 보완 및 기술 대응을 지원합니다.",
+  },
 ];
 
   const strengths = [
@@ -168,24 +205,28 @@ export default function CompanyHomepage() {
     </div>
 
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map(([num, title, sub], i) => (
-        <div
-          key={num}
-          className="bg-white p-8 shadow-[0_20px_45px_rgba(120,80,80,0.12)]"
-        >
-          <div className="mb-8 flex h-32 items-center justify-center bg-[#fbf3ef] md:h-40">
-            <div className="text-5xl font-bold text-[#d88986]/25">
-              {String(i + 1).padStart(2, "0")}
-            </div>
-          </div>
+      {products.map((item, i) => (
+        <button
+  		type="button"
+  		key={item.num}
+  		onClick={() => setSelectedProduct(item)}
+  		className="bg-white p-8 text-left shadow-[0_20px_45px_rgba(120,80,80,0.12)] transition hover:-translate-y-1"
+	 >
+  		<div className="mb-8 h-40 overflow-hidden bg-[#fbf3ef]">
+    		   <img
+      		       src={item.image}
+		       alt={item.title}
+      		       className="h-full w-full object-cover"
+    		   />
+  		</div>
 
-          <div className="text-xs font-bold text-[#caa6a3]">{num}</div>
-          <h3 className="mt-3 text-2xl font-bold text-[#333333]">{title}</h3>
-          <p className="mt-2 font-semibold text-[#d88986]">{sub}</p>
-          <p className="mt-4 text-sm leading-7 text-[#6d5b57]">
-            고주파 특성을 고려한 설계, 개발, 검증 및 제품화 대응을 수행합니다.
-          </p>
-        </div>
+  		<div className="text-xs font-bold text-[#caa6a3]">{item.num}</div>
+  		<h3 className="mt-3 text-2xl font-bold text-[#333333]">{item.title}</h3>
+  		<p className="mt-2 font-semibold text-[#d88986]">{item.sub}</p>
+  		<p className="mt-4 text-sm leading-7 text-[#6d5b57]">
+    			고주파 특성을 고려한 설계, 개발, 검증 및 제품화 대응을 수행합니다.
+  		</p>
+	</button>
       ))}
     </div>
   </div>
@@ -232,12 +273,12 @@ export default function CompanyHomepage() {
       <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
           <div>
-            <h2 className="text-4xl font-bold text-[#d88986] md:text-5xl">
+            <h2 className="text-4xl font-bold text-[#5B4A47] md:text-5xl">
               프로젝트 문의 및
               <br />
               기술 상담
             </h2>
-            <div className="mt-8 space-y-3 text-[#d88986]">
+            <div className="mt-8 space-y-3 text-[#5B4A47]">
               <div>이메일 : bmp@bmpretty.com</div>
               <div>전화 : 070-4027-3667</div>
               <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
@@ -303,6 +344,36 @@ export default function CompanyHomepage() {
     </div>
   </div>
 </footer>
+{selectedProduct && (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 px-5">
+    <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto bg-white p-6 shadow-2xl md:p-10">
+      <button
+        type="button"
+        onClick={() => setSelectedProduct(null)}
+        className="absolute right-5 top-5 text-2xl font-bold text-[#5b4a47]"
+      >
+        ×
+      </button>
+      <img
+        src={selectedProduct.image}
+        alt={selectedProduct.title}
+        className="mb-6 h-64 w-full object-cover"
+      />
+      <div className="text-xs font-bold text-[#caa6a3]">
+        {selectedProduct.num}
+      </div>
+      <h3 className="mt-3 text-3xl font-bold text-[#5b4a47]">
+        {selectedProduct.title}
+      </h3>
+      <p className="mt-3 text-lg font-semibold text-[#d88986]">
+        {selectedProduct.sub}
+      </p>
+      <p className="mt-6 leading-8 text-[#6d5b57]">
+        {selectedProduct.detail}
+      </p>
+    </div>
+  </div>
+)}
     </div>
   );
 }
