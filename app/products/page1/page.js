@@ -27,7 +27,7 @@ export default function ProductPage1() {
             <img
               src="/product01.png"
               alt="RF PCB Design"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
 

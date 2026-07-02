@@ -13,7 +13,7 @@ export default function ProductPage3() {
       <section className="px-6 py-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2">
           <div className="overflow-hidden bg-[#fbf3ef] shadow-xl">
-            <img src="/product03.png" alt="RF System" className="h-full w-full object-cover" />
+            <img src="/product03.png" alt="RF System" className="h-full w-full object-contain" />
           </div>
 
           <div>

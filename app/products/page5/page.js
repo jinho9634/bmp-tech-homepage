@@ -13,7 +13,7 @@ export default function ProductPage5() {
       <section className="px-6 py-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2">
           <div className="overflow-hidden bg-[#fbf3ef] shadow-xl">
-            <img src="/product05.png" alt="Firmware" className="h-full w-full object-cover" />
+            <img src="/product05.png" alt="Firmware" className="h-full w-full object-contain" />
           </div>
 
           <div>
