@@ -157,22 +157,6 @@ export default function CompanyHomepage() {
       {/* PRODUCTS */}
       <section id="products" className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-[1500px] px-5 md:px-8 lg:px-12">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="bg-[#d88986] p-8 text-white md:p-10">
-              <p className="text-lg font-semibold">제품소개</p>
-              <h2 className="mt-3 text-5xl font-bold">PRODUCT</h2>
-              <div className="my-10 h-px w-14 bg-white/70" />
-              <p className="leading-8">
-                비엠피테크는 고주파 RF 기술을 기반으로 PCB 설계, 회로 개발, 시제품 및 제품화 지원을 수행합니다.
-              </p>
-              <a
-                href="#contact"
-                className="mt-10 inline-flex border border-white/70 px-6 py-3 text-sm font-semibold hover:bg-white hover:text-[#d88986]"
-              >
-                CONTACT US →
-              </a>
-            </div>
-
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {products.map(([num, title, sub], i) => (
                 <div
@@ -263,34 +247,52 @@ export default function CompanyHomepage() {
       </section>
 
       {/* FOOTER */}
-      <footer id="footer" className="bg-white p-6 shadow-xl text-slate-200">
-        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 text-sm leading-7 md:grid-cols-3 md:px-8 lg:px-12">
-          <div>
-            <img src="/logo.png" alt="BMP TECH Logo" className="mb-4 h-12 w-auto" />
-            (주)비엠피테크
-            <br />
-            High Frequency RF Engineering
-          </div>
+<footer
+  id="footer"
+  className="border-t border-gray-200 bg-white"
+>
+  <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-14 text-sm leading-7 text-[#555555] md:grid-cols-3 md:px-8 lg:px-12">
+    {/* 회사 로고 */}
+    <div>
+      <img
+        src="/logo.png"
+        alt="BMP TECH Logo"
+        className="mb-5 h-14 w-auto"
+      />
+      <div className="text-lg font-bold text-[#333333]">
+        (주)비엠피테크
+      </div>
 
-          <div>
-            <div className="mb-4 font-semibold text-black">COMPANY</div>
-            (본사) 대전광역시 대덕구 신일동로17번길 5 807호
-            <br />
-            사업자등록번호 : 242-81-03731
-            <br />
-            대표자 : 김영식
-          </div>
-
-          <div>
-            <div className="mb-4 font-semibold text-black">CUSTOMER CENTER</div>
-            전화 : 070-4027-3667
-            <br />
-            평일 09:00 - 18:00
-            <br />
-            이메일 : bmp@bmpretty.com
-          </div>
-        </div>
-      </footer>
+      <div className="mt-2 text-[#888888]">
+        High Frequency RF Engineering
+      </div>
+    </div>
+    {/* 회사 정보 */}
+    <div>
+      <div className="mb-5 text-base font-bold text-[#d88986]">
+        COMPANY
+      </div>
+      <div>
+        (본사) 대전광역시 대덕구 신일동로17번길 5 807호
+      </div>
+      <div>
+        사업자등록번호 : 242-81-03731
+      </div>
+      <div>
+        대표자 : 김영식
+      </div>
+    </div>
+    {/* 고객센터 */}
+    <div>
+      <div className="mb-5 text-base font-bold text-[#d88986]">
+        CUSTOMER CENTER
+      </div>
+      <div>전화 : 070-4027-3667</div>
+      <div>평일 09:00 ~ 18:00</div>
+      <div>이메일 : bmp@bmpretty.com</div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
