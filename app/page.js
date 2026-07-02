@@ -154,7 +154,7 @@ export default function CompanyHomepage() {
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-80px)] max-w-[1500px] items-center px-6 py-12 md:px-8 lg:min-h-[calc(100vh-96px)] lg:px-12">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-extrabold leading-tight text-[#9b6a65] md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="font-[var(--font-poppins)] text-5xl font-extrabold leading-tight tracking-tight text-[#9b6a65] md:text-6xl lg:text-7xl xl:text-8xl">
               Make Beauty,
               <br />
               Make Pretty
