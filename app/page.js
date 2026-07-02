@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaUser, FaPhoneAlt, FaEnvelope, FaRegEdit } from "react-icons/fa";
 
 export default function CompanyHomepage() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -267,33 +268,72 @@ export default function CompanyHomepage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
-        <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
-          <div>
-            <h2 className="text-4xl font-bold text-[#5B4A47] md:text-5xl">
-              프로젝트 문의 및
-              <br />
-              기술 상담
-            </h2>
+<section id="contact" className="bg-[#FFF0E4] py-20 md:py-28">
+  <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
+    <div>
+      <h2 className="text-4xl font-bold text-[#5B4A47] md:text-5xl">
+        프로젝트 문의 및
+        <br />
+        기술 상담
+      </h2>
 
-            <div className="mt-8 space-y-3 text-[#5B4A47]">
-              <div>이메일 : bmp@bmpretty.com</div>
-              <div>전화 : 070-4027-3667</div>
-              <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
-            </div>
-          </div>
+      <div className="mt-8 space-y-3 text-[#5B4A47]">
+        <div>이메일 : bmp@bmpretty.com</div>
+        <div>전화 : 070-4027-3667</div>
+        <div>주소 : 대전광역시 대덕구 신일동로17번길 5 807호</div>
+      </div>
+    </div>
 
-          <form onSubmit={handleSubmit} className="bg-white p-6 shadow-xl md:p-8">
-            <input name="name" required className="mb-3 w-full border p-3" placeholder="이름" />
-            <input name="email" required className="mb-3 w-full border p-3" placeholder="이메일" />
-            <input name="phone" className="mb-3 w-full border p-3" placeholder="연락처" />
-            <textarea name="message" required className="mb-3 min-h-[150px] w-full border p-3" placeholder="문의내용" />
-            <button type="submit" className="w-full bg-[#d88986] py-3 font-semibold text-white hover:bg-[#c87976]">
-              SEND MESSAGE
-            </button>
-          </form>
-        </div>
-      </section>
+    <form onSubmit={handleSubmit} className="bg-white p-6 shadow-xl md:p-8">
+      <div className="flex items-center border-b border-gray-300 py-4">
+        <FaUser className="mr-4 text-xl text-[#5B4A47]" />
+        <input
+          name="name"
+          required
+          className="w-full outline-none"
+          placeholder="이름을 입력해주세요."
+        />
+      </div>
+
+      <div className="flex items-center border-b border-gray-300 py-4">
+        <FaPhoneAlt className="mr-4 text-xl text-[#5B4A47]" />
+        <input
+          name="phone"
+          className="w-full outline-none"
+          placeholder="연락처를 입력해주세요."
+        />
+      </div>
+
+      <div className="flex items-center border-b border-gray-300 py-4">
+        <FaEnvelope className="mr-4 text-xl text-[#5B4A47]" />
+        <input
+          name="email"
+          required
+          className="w-full outline-none"
+          placeholder="이메일 주소를 입력해주세요."
+        />
+      </div>
+
+      <div className="mt-6 flex rounded-2xl border border-gray-300 p-5">
+        <FaRegEdit className="mr-4 mt-1 text-2xl text-[#5B4A47]" />
+        <textarea
+          name="message"
+          required
+          rows={7}
+          className="w-full resize-none outline-none"
+          placeholder="문의 내용을 입력해주세요."
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="mt-6 w-full bg-[#d88986] py-4 font-semibold text-white hover:bg-[#c87976]"
+      >
+        SEND MESSAGE
+      </button>
+    </form>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer id="footer" className="border-t border-gray-200 bg-white">
