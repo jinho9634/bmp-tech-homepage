@@ -263,17 +263,17 @@ export default function CompanyHomepage() {
       </section>
 
       {/* FOOTER */}
-      <footer id="footer" className="bg-[#5b4a47] text-slate-200">
+      <footer id="footer" className="bg-white p-6 shadow-xl text-slate-200">
         <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 text-sm leading-7 md:grid-cols-3 md:px-8 lg:px-12">
           <div>
             <img src="/logo.png" alt="BMP TECH Logo" className="mb-4 h-12 w-auto" />
-            Make Beauty, Make Pretty
+            (주)비엠피테크
             <br />
             High Frequency RF Engineering
           </div>
 
           <div>
-            <div className="mb-4 font-semibold text-white">COMPANY</div>
+            <div className="mb-4 font-semibold text-black">COMPANY</div>
             (본사) 대전광역시 대덕구 신일동로17번길 5 807호
             <br />
             사업자등록번호 : 242-81-03731
@@ -282,7 +282,7 @@ export default function CompanyHomepage() {
           </div>
 
           <div>
-            <div className="mb-4 font-semibold text-white">CUSTOMER CENTER</div>
+            <div className="mb-4 font-semibold text-black">CUSTOMER CENTER</div>
             전화 : 070-4027-3667
             <br />
             평일 09:00 - 18:00
