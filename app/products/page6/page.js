@@ -1,7 +1,7 @@
 export default function ProductPage6() {
   return (
     <main className="bg-white text-[#5b4a47]">
-      <section className="bg-[#fff0e9] px-6 pt-24 pb-12 md:pt-28 md:pb-14">
+      <section className="bg-[#fff0e9] px-6 pt-16 pb-2 md:pt-20 md:pb-2">
         <div className="mx-auto max-w-[1200px]">
           <a href="/#products" className="text-sm font-bold text-[#d88986]">← PRODUCT LIST</a>
           <p className="mt-10 text-sm font-bold tracking-[0.25em] text-[#d88986]">PRODUCT 06</p>
@@ -10,7 +10,7 @@ export default function ProductPage6() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+      <section className="px-6 py-10">
         <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2">
           <div className="overflow-hidden bg-[#fbf3ef] shadow-xl">
             <img src="/product06.png" alt="Prototype Support" className="h-full w-full object-cover" />
