@@ -1,0 +1,21 @@
+C:\Users\RND_5\Desktop\yjh\work\homepage\bmp-tech-homepage> 들어가고
+
+git add .
+git commit -m "reorder homepage sections"
+git push
+순서대로 입력 후 
+
+조금있다가 https://www.bmpretty.com/ 에접속후 ctrl+shift+r로  페이지 새로고침하면 적용
+
+
+문의하기 메일 수정방법
+
+https://vercel.com/jinho9634s-projects/~/settings/environment-variables
+에 있는 CONTACT_EMAIL, SMTP_PASSWORD, SMTP_USER 변경
+변경 후
+Save 클릭
+Deployments
+최신 배포 선택
+Redeploy
+
+또는 GitHub에 새 커밋을 Push해도 자동으로 재배포됩니다.
