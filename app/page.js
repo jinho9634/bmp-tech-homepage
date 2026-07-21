@@ -75,13 +75,40 @@ export default function CompanyHomepage() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeMobile = () => setMobileOpen(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const f = e.currentTarget;
-    const subject = encodeURIComponent(`[BMP TECH 문의] ${f.name.value}`);
-    const body = encodeURIComponent(`이름: ${f.name.value}\n이메일: ${f.email.value}\n연락처: ${f.phone.value}\n\n문의내용:\n${f.message.value}`);
-    window.location.href = `mailto:bmp@bmpretty.com?subject=${subject}&body=${body}`;
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const f = e.currentTarget;
+
+  const formData = {
+    name: f.name.value,
+    email: f.email.value,
+    phone: f.phone.value,
+    message: f.message.value,
   };
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await res.json();
+
+    if (res.ok) {
+      alert("문의가 성공적으로 전달되었습니다.");
+      f.reset();
+    } else {
+      alert(result.message || "메일 전송에 실패했습니다.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("메일 전송 중 오류가 발생했습니다.");
+  }
+};
 
   return (
     <div className="bg-white text-[#5b4a47]">
