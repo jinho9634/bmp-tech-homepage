@@ -80,9 +80,38 @@ const pcbBoards = [
     "Current Monitoring"
   ]
 },
-  { num: "BOARD 04", title: "LED Driver Board", sub: "RGB LED Control Platform", image: "/board04.png", link: "/boards/board04", description: "RGB LED 및 LED Bar의 색상, 밝기, 동작 모드를 제어하는 보드입니다.", features: ["RGB 색상 제어", "PWM 밝기 제어", "다양한 표시 모드", "상태 표시 기능"], specs: ["RGB LED Driver", "PWM Control", "Multi-Mode", "Board Communication"] },
-  { num: "BOARD 05", title: "Sensor Interface Board", sub: "Sensor & ADC Interface", image: "/board05.png", link: "/boards/board05", description: "온도, IMU, ADC 등 다양한 센서 신호를 수집하고 처리하는 인터페이스 보드입니다.", features: ["다중 센서 입력", "아날로그 신호 수집", "디지털 필터링", "메인보드 연동"], specs: ["Temperature / IMU", "ADC Interface", "I2C / SPI", "Signal Conditioning"] },
-  { num: "BOARD 06", title: "Communication Board", sub: "UART / CAN / RS485 Interface", image: "/board06.png", link: "/boards/board06", description: "장비 내부 및 외부 시스템과 안정적으로 통신하기 위한 전용 인터페이스 보드입니다.", features: ["다중 통신 규격", "절연 설계 대응", "프로토콜 변환", "시스템 확장 지원"], specs: ["UART", "CAN", "RS485", "Custom Protocol"] },
+  {
+  num: "BOARD 04",
+  title: "Not yet",
+  sub: "-",
+  image: "/board04.png",
+  link: "/boards/board04",
+  description: "-",
+  features: ["-"],
+  specs: ["-"]
+},
+
+{
+  num: "BOARD 05",
+  title: "Not yet",
+  sub: "-",
+  image: "/board05.png",
+  link: "/boards/board05",
+  description: "-",
+  features: ["-"],
+  specs: ["-"]
+},
+
+{
+  num: "BOARD 06",
+  title: "Not yet",
+  sub: "-",
+  image: "/board06.png",
+  link: "/boards/board06",
+  description: "-",
+  features: ["-"],
+  specs: ["-"]
+},
 ];
 
 const strengths = [
