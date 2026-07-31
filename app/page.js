@@ -6,40 +6,80 @@ import { FaUser, FaPhoneAlt, FaEnvelope, FaRegEdit } from "react-icons/fa";
 const commercialProducts = [
   {
     num: "PRODUCT 01",
-    title: "RF Beauty Device",
-    sub: "Professional RF Beauty System",
+    title: "Not yet",
+    sub: "-",
     image: "/product01.png",
     link: "/products/product01",
-    description: "전문적인 피부 관리 환경을 위해 설계된 고주파 RF 기반 상용 장비입니다.",
-    features: ["정밀 RF 출력 제어", "사용자 중심 인터페이스", "안정적인 장시간 운용", "제품 맞춤형 구성 지원"],
-    specs: ["RF 기반 에너지 출력", "디지털 제어 시스템", "전문가용 장비", "상세 사양 협의 가능"],
+    description: "-.",
+    features: ["-"],
+    specs: ["-"],
   },
   {
     num: "PRODUCT 02",
-    title: "RF Handpiece System",
-    sub: "Multi-Frequency RF Handpiece",
+    title: "Not yet",
+    sub: "-",
     image: "/product02.png",
     link: "/products/product02",
-    description: "다양한 시술 환경에 적용할 수 있도록 설계된 전문 RF 핸드피스 시스템입니다.",
-    features: ["다중 주파수 대응", "안정적인 에너지 전달", "교체형 핸드피스 구성", "인체공학적 외형 설계"],
-    specs: ["RF Handpiece Platform", "다중 출력 모드", "장비 연동형", "상세 사양 협의 가능"],
+    description: "-.",
+    features: ["-"],
+    specs: ["-"],
   },
   {
     num: "PRODUCT 03",
-    title: "LED Care System",
-    sub: "Professional LED Care Device",
+    title: "Not yet",
+    sub: "-",
     image: "/product03.png",
     link: "/products/product03",
-    description: "다양한 LED 파장과 밝기 제어 기능을 적용한 전문가용 케어 시스템입니다.",
-    features: ["다중 LED 파장 지원", "단계별 광량 제어", "프로그램 모드 운용", "제품 맞춤형 외형 적용"],
-    specs: ["Multi-Wavelength LED", "Digital Intensity Control", "Program Mode", "상세 사양 협의 가능"],
+    description: "-.",
+    features: ["-"],
+    specs: ["-"],
   },
 ];
 
 const pcbBoards = [
   { num: "BOARD 01", title: "Cooling Mono RF Board", sub: "6.78 MHz RF Control Platform", image: "/board01.png", link: "/boards/board01", description: "6.78 MHz RF 출력 제어와 실시간 계측·보호 기능을 통합한 고정밀 제어 보드입니다.", features: ["RF 주파수 생성", "출력 레벨 제어", "보호 로직 연동", "시스템 통신 지원"], specs: ["RF Generator", "Digital Control", "Custom Frequency", "Prototype / Mass Production"] },
-  { num: "BOARD 02", title: "RF Power Board", sub: "High-Power RF Amplifier", image: "/board02.png", link: "/boards/board02", description: "RF 신호를 목표 출력으로 증폭하기 위한 고출력 전력 보드입니다.", features: ["고출력 RF 증폭", "출력 안정화", "전류·온도 보호", "임피던스 조건 대응"], specs: ["RF Power Stage", "Protection Circuit", "Power Monitoring", "Custom Design"] },
-  { num: "BOARD 03", title: "Main Control Board", sub: "Embedded Main Controller", image: "/board03.png", link: "/boards/board03", description: "장비의 동작 순서와 입출력, 통신을 통합 제어하는 메인 제어 보드입니다.", features: ["MCU 기반 제어", "다중 입출력", "상태 모니터링", "펌웨어 맞춤 개발"], specs: ["Embedded MCU", "UART / CAN / RS485", "Sensor Interface", "Custom Firmware"] },
+  {
+  num: "BOARD 02",
+  title: "Dynamic Bipolar RF Board",
+  sub: "Quad-Channel Bipolar RF Generator Platform",
+  image: "/board02.png",
+  link: "/boards/board02",
+  description:
+    "4개의 독립 RF 출력 채널을 기반으로 채널당 최대 50 W의 Bipolar RF 출력을 지원하며, 각 채널에서 1 MHz와 2 MHz 주파수를 선택할 수 있도록 설계된 멀티채널 RF Generator Board입니다.",
+  features: [
+    "4채널 독립 Bipolar RF 출력",
+    "채널당 최대 50 W 출력",
+    "채널별 1 MHz / 2 MHz 선택",
+    "실시간 전류 모니터링"
+  ],
+  specs: [
+    "4-Channel Bipolar RF",
+    "50 W per Channel",
+    "1 MHz / 2 MHz",
+    "250 Ω Nominal Load"
+  ]
+},
+  {
+  num: "BOARD 03",
+  title: "HKC Board",
+  sub: "Multi-Frequency Mono / Bipolar RF Platform",
+  image: "/board03.png",
+  link: "/boards/board03",
+  description:
+    "1 MHz, 1.5 MHz, 2 MHz 주파수를 지원하며 Monopolar 및 Bipolar 핸드피스를 모두 연결할 수 있도록 설계된 RF Generator Board입니다.",
+  features: [
+    "1 MHz / 1.5 MHz / 2 MHz 지원",
+    "Monopolar 및 Bipolar 출력",
+    "RF 출력 전류 모니터링",
+    "RS232 / UART 통신"
+  ],
+  specs: [
+    "Mono / Bipolar RF",
+    "Multi-Frequency Control",
+    "STM32F405 Controller",
+    "Current Monitoring"
+  ]
+},
   { num: "BOARD 04", title: "LED Driver Board", sub: "RGB LED Control Platform", image: "/board04.png", link: "/boards/board04", description: "RGB LED 및 LED Bar의 색상, 밝기, 동작 모드를 제어하는 보드입니다.", features: ["RGB 색상 제어", "PWM 밝기 제어", "다양한 표시 모드", "상태 표시 기능"], specs: ["RGB LED Driver", "PWM Control", "Multi-Mode", "Board Communication"] },
   { num: "BOARD 05", title: "Sensor Interface Board", sub: "Sensor & ADC Interface", image: "/board05.png", link: "/boards/board05", description: "온도, IMU, ADC 등 다양한 센서 신호를 수집하고 처리하는 인터페이스 보드입니다.", features: ["다중 센서 입력", "아날로그 신호 수집", "디지털 필터링", "메인보드 연동"], specs: ["Temperature / IMU", "ADC Interface", "I2C / SPI", "Signal Conditioning"] },
   { num: "BOARD 06", title: "Communication Board", sub: "UART / CAN / RS485 Interface", image: "/board06.png", link: "/boards/board06", description: "장비 내부 및 외부 시스템과 안정적으로 통신하기 위한 전용 인터페이스 보드입니다.", features: ["다중 통신 규격", "절연 설계 대응", "프로토콜 변환", "시스템 확장 지원"], specs: ["UART", "CAN", "RS485", "Custom Protocol"] },
