@@ -37,7 +37,7 @@ const commercialProducts = [
 ];
 
 const pcbBoards = [
-  { num: "BOARD 01", title: "RF Generator Board", sub: "RF 신호 생성 및 출력 제어", image: "/board01.png", link: "/boards/board01", description: "고주파 RF 신호 생성과 출력 제어를 위한 핵심 회로 보드입니다.", features: ["RF 주파수 생성", "출력 레벨 제어", "보호 로직 연동", "시스템 통신 지원"], specs: ["RF Generator", "Digital Control", "Custom Frequency", "Prototype / Mass Production"] },
+  { num: "BOARD 01", title: "Cooling Mono RF Board", sub: "6.78 MHz RF Control Platform", image: "/board01.png", link: "/boards/board01", description: "6.78 MHz RF 출력 제어와 실시간 계측·보호 기능을 통합한 고정밀 제어 보드입니다.", features: ["RF 주파수 생성", "출력 레벨 제어", "보호 로직 연동", "시스템 통신 지원"], specs: ["RF Generator", "Digital Control", "Custom Frequency", "Prototype / Mass Production"] },
   { num: "BOARD 02", title: "RF Power Board", sub: "High-Power RF Amplifier", image: "/board02.png", link: "/boards/board02", description: "RF 신호를 목표 출력으로 증폭하기 위한 고출력 전력 보드입니다.", features: ["고출력 RF 증폭", "출력 안정화", "전류·온도 보호", "임피던스 조건 대응"], specs: ["RF Power Stage", "Protection Circuit", "Power Monitoring", "Custom Design"] },
   { num: "BOARD 03", title: "Main Control Board", sub: "Embedded Main Controller", image: "/board03.png", link: "/boards/board03", description: "장비의 동작 순서와 입출력, 통신을 통합 제어하는 메인 제어 보드입니다.", features: ["MCU 기반 제어", "다중 입출력", "상태 모니터링", "펌웨어 맞춤 개발"], specs: ["Embedded MCU", "UART / CAN / RS485", "Sensor Interface", "Custom Firmware"] },
   { num: "BOARD 04", title: "LED Driver Board", sub: "RGB LED Control Platform", image: "/board04.png", link: "/boards/board04", description: "RGB LED 및 LED Bar의 색상, 밝기, 동작 모드를 제어하는 보드입니다.", features: ["RGB 색상 제어", "PWM 밝기 제어", "다양한 표시 모드", "상태 표시 기능"], specs: ["RGB LED Driver", "PWM Control", "Multi-Mode", "Board Communication"] },
@@ -147,7 +147,7 @@ export default function CompanyHomepage() {
           </div>
 
           <div id="pcb-solutions" className="mt-24 scroll-mt-28 border-t border-[#eadbd7] pt-20">
-            <div className="mb-8"><p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">PCB Solutions</p><h3 className="mt-3 text-3xl font-extrabold md:text-4xl">제작 보드</h3><p className="mt-3 text-[#6d5b57]">RF, 제어, LED, 센서 및 통신 분야의 자체 설계·제작 PCB 보드입니다.</p></div>
+            <div className="mb-8"><p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d88986]">PCB Solutions</p><h3 className="mt-3 text-3xl font-extrabold md:text-4xl">제작 보드</h3><p className="mt-3 text-[#6d5b57]">RF 자체 설계·제작 PCB 보드입니다.</p></div>
             <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">{pcbBoards.map((item) => <ProductCard key={item.num} item={item} />)}</div>
           </div>
         </div>
