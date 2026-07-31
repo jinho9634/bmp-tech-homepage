@@ -114,85 +114,54 @@ export const pcbBoards = {
       "Custom OEM RF Platform"
     ],
 
-    specGroups: [
-      {
-        title: "RF Output",
-        rows: [
-          ["Operating Frequency", "6.78 MHz"],
-          ["Output Waveform", "Sine Wave"],
-          ["Maximum Output Power", "200 Watt"],
-          ["Load Impedance Range", "75–400 Ω"],
-          ["Nominal Load", "250 Ω"],
-          ["Power Control", "16-bit Precision Control"],
-          ["Dual Output", "Supported"]
-        ]
-      },
-      {
-        title: "Processor",
-        rows: [
-          ["Main Processor", "32-bit ARM Cortex-M4 MCU"],
-          ["Logic Processor", "Low-Power FPGA"],
-          ["Processing Structure", "MCU + FPGA Dual Processing"]
-        ]
-      },
-      {
-        title: "Measurement & Control",
-        rows: [
-          ["Main Measurement ADC", "16-bit High-Speed Multi-Channel ADC"],
-          ["Auxiliary ADC", "12-bit Multi-Channel ADC"],
-          ["Output Control DAC", "16-bit Precision DAC"],
-          ["Measurement Signals", "RF Current / Voltage / Phase"],
-          ["Feedback Control", "Real-Time Measurement Feedback"]
-        ]
-      },
-      {
-        title: "Communication",
-        rows: [
-          ["Serial Communication", "RS232 최대 6채널"],
-          ["Internal Communication", "SPI"],
-          ["LCD Communication", "Supported"],
-          ["I/O Expansion", "SPI I/O Expander"],
-          ["External Interface", "Handpiece / Foot Switch / External Device"]
-        ]
-      },
-      {
-        title: "Power Sources",
-        rows: [
-          ["Main Input", "48 VDC"],
-          ["Internal Power Rails", "13종"],
-          ["Power Rail Range", "+48 V ~ +1.2 V, ±12 V, ±5 V 등"],
-          ["Isolated Power", "Isolated DC-DC Converter"],
-          ["RF Power Switching", "SiC MOSFET"],
-          ["Low-Noise Power", "아날로그 회로 전용 클린 전원 공급"]
-        ]
-      },
-      {
-        title: "Monitoring & Protection",
-        rows: [
-          ["Temperature Monitoring", "4채널 실시간 온도 감시"],
-          ["Current Monitoring", "Detection / Output / Power 다중 채널"],
-          ["PLL Lock Monitoring", "Supported"],
-          ["Pressure / Level Input", "2 Channels"],
-          ["Foot Switch Input", "2 Channels"],
-          ["Discharge Circuit", "Supported"],
-          ["Watchdog", "Supported"],
-          ["Thermal Shutdown", "60 °C"],
-          ["Monitoring Structure", "다중 안전 모니터링"]
-        ]
-      },
-      {
-        title: "Customization & Technical Support",
-        rows: [
-          ["Circuit Customization", "고객 요구사항에 따른 회로 설계 변경 지원"],
-          ["Firmware Customization", "운용 조건에 따른 제어 펌웨어 개발 지원"],
-          ["LCD Interface", "LCD 통신 및 사용자 인터페이스 연동 지원"],
-          ["External Interface", "핸드피스 및 외부 장치 인터페이스 변경 지원"],
-          ["Test & Inspection", "제품 시험 및 검사 과정의 기술 대응 지원"],
-          ["Technical Documents", "시험 및 인증 준비에 필요한 기술 자료 전달 가능"],
-          ["Medical Device Standards", "의료기기 관련 규격 요구사항을 고려한 설계 및 개발 지원"]
-        ]
-      }
+   specGroups: [
+  {
+    title: "RF Output",
+    rows: [
+      ["Operating Frequency", "6.78 MHz"],
+      ["Output Waveform", "Sine Wave"],
+      ["Maximum Output Power", "200 Watt"],
+      ["Load Impedance Range", "75–400 Ω"],
+      ["Nominal Load", "250 Ω"]
     ]
+  },
+  {
+    title: "Measurement & Control",
+    rows: [
+      ["Measurement Signals", "RF Current / Voltage / Phase / REQM"]
+    ]
+  },
+  {
+    title: "Communication",
+    rows: [
+      ["LCD Communication", "LCD Protocol Support"],
+      ["External Interface", "Handpiece / Foot Switch / External Device"]
+    ]
+  },
+  {
+    title: "Monitoring & Protection",
+    rows: [
+      ["Board Temperature Monitoring", "Real-Time Board Temperature Monitoring"],
+      ["Foot Switch Input", "1 Channel"],
+      ["Discharge Circuit", "Supported"],
+      ["Watchdog", "Supported"],
+      ["Thermal Shutdown", "60 °C"],
+      ["Monitoring Structure", "다중 안전 모니터링"]
+    ]
+  },
+  {
+    title: "Customization & Technical Support",
+    rows: [
+      ["Circuit Customization", "고객 요구사항에 따른 회로 설계 변경 지원"],
+      ["Firmware Customization", "운용 조건에 따른 제어 펌웨어 개발 지원"],
+      ["LCD Interface", "LCD 통신 및 사용자 인터페이스 연동 지원"],
+      ["External Interface", "핸드피스 및 외부 장치 인터페이스 변경 지원"],
+      ["Test & Inspection", "제품 시험 및 검사 과정의 기술 대응 지원"],
+      ["Technical Documents", "시험 및 인증 준비에 필요한 기술 자료 전달 가능"],
+      ["Medical Device Standards", "의료기기 관련 규격 요구사항을 고려한 설계 및 개발 지원"]
+    ]
+  }
+]
   },
 
   board02: {

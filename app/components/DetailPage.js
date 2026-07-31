@@ -199,7 +199,7 @@ function TechnicalBoardPage({ item }) {
                 </h2>
               </div>
 
-              <div className="grid gap-x-7 gap-y-7 xl:grid-cols-2">
+              <div className="space-y-8">
                 {specGroups.map((group) => (
                   <section key={group.title} className="break-inside-avoid">
                     <div className="border-b-2 border-[#d88986] pb-2">
