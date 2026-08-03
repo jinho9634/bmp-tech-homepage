@@ -234,11 +234,11 @@ function TechnicalBoardPage({ item }) {
           </div>
 
           <div className="border-t border-[#eadbd7] bg-white px-6 py-5 md:px-9">
-            <p className="text-[10px] leading-5 text-[#786966] md:text-xs">
-              ※ 기술 사양은 사전 예고 없이 변경될 수 있습니다. 본 페이지에 기재된 기능 및 기술적 특징은 게시 시점을 기준으로 하며, 법적 구속력이나 성능 보증을 의미하지 않습니다. 모든 사양은 별도의 예고 없이 변경될 수 있으며, 최신 정보는 비엠피테크로 문의해 주시기 바랍니다.
+            <p className="text-[9px] leading-5 text-[#786966] md:text-xs">
+              ※ 기술 사양은 사전 예고 없이 변경될 수 있습니다. 본 페이지에 기재된 기능 및 기술적 특징은 게시 시점을 기준으로 하며, 법적 구속력이나 성능 보증을 의미하지 않습니다. 모든 사양은 별도의 예고 없이 변경될 수 있으며, 관련 사항은 비엠피테크로 문의해 주시기 바랍니다.
             </p>
-            <p className="mt-2 text-[9px] leading-4 text-[#9a8884] md:text-[11px]">
-              Technical specifications are subject to change without prior notice. The functions and technical features detailed here are valid at the time of publication. They are neither legally binding nor guaranteed. For the latest information, please contact BMP TECH.
+            <p className="mt-2 text-[8px] leading-4 text-[#9a8884] md:text-[11px]">
+              Technical specifications are subject to change without prior notice. The functions and technical features described on this page are valid at the time of publication. They are neither legally binding nor guaranteed. All specifications are subject to change without prior notice. For any related inquiries, please contact BMP TECH.
             </p>
           </div>
 
